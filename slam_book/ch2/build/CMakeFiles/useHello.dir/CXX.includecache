@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yuxuan/OneDrive/Dokument/Study/8/Seminar Sensorik In Robotik/Sensors_In_Robot/slam_book/ch2/libHelloSLAM.h
+
+/home/yuxuan/OneDrive/Dokument/Study/8/Seminar Sensorik In Robotik/Sensors_In_Robot/slam_book/ch2/useHello.cpp
+libHelloSLAM.h
+/home/yuxuan/OneDrive/Dokument/Study/8/Seminar Sensorik In Robotik/Sensors_In_Robot/slam_book/ch2/libHelloSLAM.h
+
