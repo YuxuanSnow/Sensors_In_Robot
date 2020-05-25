@@ -1,0 +1,88 @@
+[1]Hello Everyone. My assigned topic is visual odometry: ORB SLAM. Unlikely to the LSD SLAM, ORB SLAM is a feature based SLAM, which means we have to extract features, find corresponding points and reconstruct the environment. 
+
+[2]Before i begin, i‘d like to give you a breif recap of SLAM. SLAM is Simultaneous Localization and Mapping system, which is a computational problem of constructing or updating a map of an unknown environment while simultaneously keeping track of robots’ location within it. It has two main tasks, Localozation means the robot should now where I am, and Mapping is the reconstruction of the surrounding environment.
+
+[3]Here is a simple example. It is a indoor mobile robot with 2d Lidar SLAM. As shown in the figure, the robot should localize itself in the reconstructed map. Besides it should also reconstruct the unknown environment, like where is the position of obstacles.
+
+[4]OK, here is a classical Structure of SLAM. The Input is sensor Data, the first step is visual odometry. In this step, feature is extracted from frame, the keypoint of 2 frames will be matched and a initial pose of camera is estimated. Then the machted points will help to reconstruct 3D points location in the Backend step. Having 3D points postion, we can do the mapping task. However there is a issue called accumulating drifting. As shown in this figure, each step has a tiny drift, could have a huge accumulating drift in the end. We need a loop closure detection. Once the system find that it was actually at this place before, it is a loop closure and the drift is elimated by the backend step.
+
+[5]After a short recap of slam, we can now go into the paper. In the introduction, the author has listed main contributions of the paper. In the System Overview part, there is a intuitive structure of the ORB SLAM, which contains the Main Procedure here chapter V,VI,VII and some other used techniques. 
+
+[6]Let‘s first see which contributions ORB slam has of the view of  author. ORB Slam uses ORB features, which is system efficient, it means it allows real-time performance without GPU support. The second and the third are Covisibility graph and essential graph, respectively. They both ensure the real time performance of the system.
+
+[7]In the chapter of related work, the author refered several papers. And the most impactful one is PTAM, Parallel Tracking and Mapping by Klein and Murray in 2007. It is actually the first real-time ground breaking slam work. In PTAM, the frontend and the backend are firstly seperated. We track simultanously, but don‘t have to do it real time in backend, which saves computational effort. The weakness is the ptam has no loop closing, and the detector also has low invariance to things such as scaling or rotation. These weakness is improved in the orb slam.
+
+[8]The Thid chapter is System overview. It introduces the procedure and used techniques of ORB SLAM. At the next slide, I put a intuitive structure of it.
+
+[9]Here is the structure of the orb slam. A mono camera takes a frame, it goes in to the first step, tracking, which is the frontend step in the slam. After that, the initial pose of the camera is estimated and key frames are added. The second step called Local mapping, it corresponds the backend step. The final step is Loop closing. There are also two techniques, which are map and Place recognition. The 4 elements in Map describe the property of the reconstructed map. The Place recognition describes how to accelerate the key feature matching process.
+OK, let’s analyse it step by step. The first step is Extraction of ORB Features.
+
+[10]ORB is the abbreviation of oriented fast and rotated brief. It is a feature detector just like SURF and SIFT. However, according to the paper, it it much quicker than SURF and SIFT. In the paper, the author intriduced that the extraction process should be less than 33 second per frame. Due to this requirement, SURF and SIFT are excluded. The Descriptor should be rotation invariant, normal BRIEF is excluded. Let me introduce how ORB works.
+
+[11]As i said, orb has an oriented fast detector. FAST is Features from Accelerated Segment Test. For example, the pixel in the middle is sufficiently unique to its neihgborhood, so i mark the pixel as a key point. In order to make the detector scale invariant, i use the image pyramide to find the feature. We also want to have the orientation of the feature. For this reason, we compute a intensity centroid of the little patch of the feature. Then i have such a vector, it is the orientation of the feature.
+
+[12]Brief is a feature descriptor. In the last slide, I have obtained the orientation of the feature, so it is now rotated BRIEF. Thanks to BRIEF, i can describe the feature point with binary vector, which is computationally efiicient.  Here is a example of matched ORB features of 2 frames after simplification.
+
+[9]Okay. Because we only have a mono camera, we can not directly get the depth information. We need to initialize to get the pose and the initial map. 
+
+[13]In the last step we extracted the orb features, now we find corresponding key points in the current frame and the reference frame. After that, we have to select a model to do the structure from motion. There are two case of points, in the planar case, which means all points lie in the same plane, we use Homography. In the other case we use Fundamental matrix. Now we have two models, we need a heutistic to choose the appropriate model. SH and SF are the score of reprojection errors of two models respectively. When the RH is greater than 0.45 we choose Homography to compute the camera pose. At last, we use Bundle Adjustment to refine the initial reconstruction.
+
+[14]This example shows how the ORB SLAM initialize.
+
+[15]I hope i have explained clearly. Actually i have prepared several slides about the math problem like how to derive fundamental matrix. If you want to see it, you can type something and i will try to explain it at the end of the presentation.
+
+[9]Next step, track local map
+
+[18]After the initialization step, we already have initial estimation of camera pose and a initial set of feature matches. However, the camera pose is only one time estimated, which could be not so accurate. We have to obtain more map points correspondece to optimize the camera pose. A simple way is to project map into frame. We can now optimize the camera pose with all the map points found in the frame. Besides, we only project the local map, which can bound the complexity of large map. Here is a definition called covisibility graph, i will refer to it later.
+
+[9] Okay. Next step, Keyframe decision. 
+
+[19]So what is keyframe, let‘s see the properties of map points and Keyframe from author. 
+
+[20]A map point should have 3D position, the viewing direction, the ORB Descrpitor and the distance of observable points. The Keyframe should contains camera pose, camera instrincs and ORB features in the frame. Let‘s see a example.
+
+[21]In this figure, the red and black points are map points, blue frames are key frames and the green frame are the current camera frame. The Keyframes are important, it should not be too sparse, cuz the camera information only stored in the keyframe. It should also not be too dense, in order to not store too much information and use too much computational effort. In that case, a good heuristic of the Keyframe Decision is quite important. This is also why the author said that the approach to Keyframe decision is one of the six main contributions of the work.
+
+[19]How can we decide if we insert a new Keyframe? There is here 4 conditions. All the following conditions must be met to insert a new Keyframe. 
+
+[9]Basically, we have covered the frontend part of the ORB Slam. Before we start next part, i want to explain something important to the use of the keyframe. I hope you still remember the property of the Map points and the Keyframes. In addition to them, there are several other useful property of the map class. Lets figure it out. 
+
+[21]Globally, i have here so many keyframes. It could be a good idea to store the Keyframes in a graph. The graph is called covisibility graph.
+
+[22]On the right is some notation of hwo to construct a covisibility graph from Keyframes. Like its name, the graph build edge between two Keyframes, if they have many covisible map points. Each edge has weight, which means how many covisible points the two Keyframe have.
+
+[23]Spanning tree looks much more simple. It has actually only one edge between the Keyframe and the most covisible reference keyframe.
+
+[24]The final version is essential Graph. It simplifies covisibility graph by substracting edges with weights less than 100. Essential Graph is a globally graph. By use of essential graph, we can do the loop closing efficiently.
+
+[25]Here is a simple visualized explanation. I have here some covisible points in Key frames, i construct the covisibility grah. Based on the covisibility graph i construct the essential graph. Lets go back and check again the main contributions of the work.
+
+[6]We know now what is the ORB features. After that, we know how the system initialize and the camera relocalize. We also know how to select the map point and keyframe. Covisibility graph and essential graph, we know how to construct and why it is good. Basically, we have explored the main contributions of the work and the frontend part of the ORB SLAM.
+
+[9]Now we begin with the Backend part.
+
+[26]The Backend part has basically 5 tasks. It becomes a Keyframe from front end. So the first thing is to insert the Keyframe in the covisibility graph. After that, we have to do map points culling to ensure all map points are trackable and not wronly triangulated. We need to create new map points according to the ORB features from keyframes and do the local bundle adjustment to optimize it. At last, we do the local Keyframe culling to detect and delete redundant Keyframes. For all culling process there are strict conditions, if you are interested you can read it in the work.
+
+[27]Here is a example. I have a new Keyframe, i insert it into the covisibility graph. At the same time i create the map point based on all features on the keyframe. This is basically how the backend works.
+
+[9]Okay. Then is the important part: Loop closing. Before we move into that part, let‘s me introduce the technique Place recognition first. 
+
+[28]Each frame has a Bag of Words. Bag of words contains features and descriptors of images, it helps us to find two similar images. Let‘s see how to detect a  loop.
+
+[29]First of all, we need to detect loop candidates. I can compute the similarity of current Keyframe and ist neighbors in the covisibility graph. After that, i do the similarity transformation, to check the accumulated drift.
+
+[30]Here i have my current frame. The candidate frame is the neighbor of current frame in such a covisibility graph, i will compute the similarity. The candidate frame with sufficient high similarity is the loop frame. 
+
+[9]After we detect the loop. We have to correct it. 
+
+[31]We first do the loop fusion, that means we fuse the duplicated map points and insert new edges in the covisibility graph. After that, we can do a essential graph optimization to optimize the camera pose. After this step, the accumulated drift is eliminated and we have a perfect loop.
+
+[32]A short example of Pose optimization
+
+[33]We know how ORB Slam works. Let‘s see the performance of ORB Slam on one of the dataset. We can see here, the accumulated drift is eliminated perfectly, The tracking process is less than 33 ms, which meets the requirement of real time performance. Backend part takes a little bit longer, but it is not a problem. It is fair to say, ORB slam is a well performed real time localization method.
+
+[34]Let‘s finally draw a conclusion of the work. The author said, ORB is the most reliable and complete solution for monocular SLAM. He also compared such feature based mthod with direct methods. Direct methods don‘t track the feature, so they are better in Blur and low texture environments. However, they are weak if the environment has non-lambertian surface such as specular surface. The third point is the information of reconstructed map.
+
+[35]The left is LSD, a direct method SLAM and the right is the ORB. As you can see, the LSD has a semi dense reconstruction, which has much more detail than the sparse point cloud map of ORB. How to make the ORB map denser, is also the future work of author.
+
+[36]Alright. That's all my representation of ORB Slam. Thank you for your attention.
