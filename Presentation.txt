@@ -1,6 +1,6 @@
 [1]Hello Everyone. My assigned topic is visual odometry: ORB SLAM. Unlikely to the LSD SLAM, ORB SLAM is a feature based SLAM, which means we have to extract features, find corresponding points and reconstruct the environment. 
 
-[2]Before i begin, i‘d like to give you a breif recap of SLAM. SLAM is Simultaneous Localization and Mapping system, which is a computational problem of constructing or updating a map of an unknown environment while simultaneously keeping track of robots’ location within it. It has two main tasks, Localozation means the robot should now where I am, and Mapping is the reconstruction of the surrounding environment.
+[2]Before i begin, i‘d like to give you a breif recap of SLAM. SLAM is Simultaneous Localization and Mapping system. It has two main tasks, Localozation means the robot should now where I am, and Mapping is the reconstruction of the surrounding environment.
 
 [3]Here is a simple example. It is a indoor mobile robot with 2d Lidar SLAM. As shown in the figure, the robot should localize itself in the reconstructed map. Besides it should also reconstruct the unknown environment, like where is the position of obstacles.
 
@@ -29,7 +29,7 @@ OK, let’s analyse it step by step. The first step is Extraction of ORB Features.
 
 [14]This example shows how the ORB SLAM initialize.
 
-[15]I hope i have explained clearly. Actually i have prepared several slides about the math problem like how to derive fundamental matrix. If you want to see it, you can type something and i will try to explain it at the end of the presentation.
+[15]I hope i have explained clearly. Actually i have prepared several slides about the background like how to derive fundamental matrix. If you want to see it, you can type something and i will try to explain it at the end of the presentation.
 
 [9]Next step, track local map
 
@@ -85,4 +85,4 @@ OK, let’s analyse it step by step. The first step is Extraction of ORB Features.
 
 [35]The left is LSD, a direct method SLAM and the right is the ORB. As you can see, the LSD has a semi dense reconstruction, which has much more detail than the sparse point cloud map of ORB. How to make the ORB map denser, is also the future work of author.
 
-[36]Alright. That's all my representation of ORB Slam. Thank you for your attention.
+[36]Alright. That's all my Presentation of ORB Slam. Thank you for your attention.
