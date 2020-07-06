@@ -21,28 +21,27 @@
 
 % See the \addtolength command later in the file to balance the column lengths
 % on the last page of the document
+\usepackage{caption}
+\captionsetup[table]{position=bottom}
+\usepackage{subfig}
 
 % The following packages can be found on http:\\www.ctan.org
-%\usepackage{graphics} % for pdf, bitmapped graphics files
-%\usepackage{epsfig} % for postscript graphics files
-%\usepackage{mathptmx} % assumes new font selection scheme installed
-%\usepackage{times} % assumes new font selection scheme installed
-%\usepackage{amsmath} % assumes amsmath package installed
-%\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{graphicx} % for pdf, bitmapped graphics files
+\usepackage{epsfig} % for postscript graphics files
+\usepackage{mathptmx} % assumes new font selection scheme installed
+\usepackage{times} % assumes new font selection scheme installed
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
 
 \title{\LARGE \bf
-Preparation of Papers for IEEE Sponsored Conferences \& Symposia*
+ORB-SLAM
 }
 
 
 \author{Yuxuan Xue$^{1}$% <-this % stops a space
-\thanks{*This work was not supported by any organization}% <-this % stops a space
-\thanks{$^{1}$Albert Author is with Faculty of Electrical Engineering, Mathematics and Computer Science,
-        University of Twente, 7500 AE Enschede, The Netherlands
-        {\tt\small albert.author@papercept.net}}%
-\thanks{$^{2}$Bernard D. Researcheris with the Department of Electrical Engineering, Wright State University,
-        Dayton, OH 45435, USA
-        {\tt\small b.d.researcher@ieee.org}}%
+\thanks{$^{1}$Yuxuan Xue is with Faculty of Informatics and Mechanical Engineering,
+        Technical University of Munich, 85748 Garching bei Munich, Germany
+        {\tt\small yuxuan.xue@tum.de}}%
 }
 
 
@@ -58,28 +57,257 @@ Preparation of Papers for IEEE Sponsored Conferences \& Symposia*
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 
-This electronic document is a ÒliveÓ template. The various components of your paper [title, text, heads, etc.] are already defined on the style sheet, as illustrated by the portions given in this document.
+This paper is a review of ORB-SLAM, a topic in seminar sensors in robots. ORB-SLAM is a feature-based monocular simultaneous localization and mapping (SLAM) system that operates well-performed in real-time and in environments with different illumination or scaling conditions. This paper introduces how ORB-SLAM works from the algorithm level, the primary procedure, the comparison to other popular SLAM methods, and a lesson learned from the preparation of the presentation and the paper reproduction.
 
 \end{abstract}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{INTRODUCTION}
+\section{Introduction}
+\label{section_introduction}
 
-This template provides authors with most of the formatting specifications needed for preparing electronic versions of their papers. All standard paper components have been specified for three reasons: (1) ease of use when formatting individual papers, (2) automatic compliance to electronic requirements that facilitate the concurrent or later production of electronic products, and (3) conformity of style throughout a conference proceedings. Margins, column widths, line spacing, and type styles are built-in; examples of the type styles are provided throughout this document and are identified in italic type, within parentheses, following the example. Some components, such as multi-leveled equations, graphics, and tables are not prescribed, although the various table text styles are provided. The formatter will need to create these components, incorporating the applicable criteria that follow.
+ORB-SLAM is a state-of-the-art visual SLAM method. As shown in figure \ref{main_structure}, the visual SLAM system consists of five modules. The camera captures images. The visual odometry (frontend) estimates camera motion based on images. The loop closure detector uses images to address the drifting problem of position estimation. The optimization step (backend) uses the information from visual odometry and loop closure detector to estimate uncertainty and eliminate accumulating drift. In the end, a map of the environment is generated according to the information from the backend.
+%
+\begin{figure}[!htbp]%
+\centering
+\includegraphics[scale=0.175]{./images/Main_structure}
+\caption{A general structure of visual SLAM system consists of sensors, frontend, backend, loop closing, and mapping.}
+\label{main_structure}
+\end{figure}
+%
+\\
 
-\section{PROCEDURE FOR PAPER SUBMISSION}
+In comparison to previous SLAM methods, the ORB SLAM has the following main contributions.
+\begin{itemize}
 
-\subsection{Selecting a Template (Heading 2)}
 
-First, confirm that you have the correct template for your paper size. This template has been tailored for output on the US-letter paper size. 
-It may be used for A4 paper size if the paper size setting is suitably modified.
+\item \textit{Features:}  ORB features allow real-time performance without GPU and provide good invariance to changes in viewpoint and illumination. Use of the same features for all tasks makes SLAM system more efficient, simple and reliable. 
+\item \textit{Covisibility Graph:} Tracking and Mapping are only focused on a local covisible area. The use of covisibility graph ensures the SLAM system's real-time operation in a large environment, independent of global map size.
+\item \textit{Essential Graph:} A spanning tree maintained by the system, loop closure links, and strong edges from the covisibility graph. Thanks to the essential graph, the SLAM system has a real-time loop closing operation.
+\item \textit{Camera relocalization:} Thanks to significant invariance to viewpoint and illumination, the System can provide real-time recovery from tracking  failure and enhancing map reuse.
+\item \textit{Map Initialization:} A new approach to select a model for the planar and nonplanar case builds an automatic and robust initialization procedure. 
+\item \textit{Map point and Keyframe selection:} A reliable approach to select keyframe and map point improves tracking robustness, and ignore redundant keyframes.
 
-\subsection{Maintaining the Integrity of the Specifications}
+\end{itemize}
 
-The template is used to format your paper and style the text. All margins, column widths, line spaces, and text fonts are prescribed; please do not alter them. You may note peculiarities. For example, the head margin in this template measures proportionately more than is customary. This measurement and others are deliberate, using specifications that anticipate your paper as one part of the entire proceedings, and not as an independent document. Please do not revise any of the current designations
 
-\section{MATH}
+\section{Technique}
+\subsection{Parralel Tracking and Mapping}
+Bundle adjustment (BA) is a well-known nonlinear optimization algorithm aiming at the minimization of reprojection error to provide accurate estimates of camera localization and points geometry reconstruction. However, due to the high cost of computation, the BA approach was considered unaffordable for real-time applications such as visual SLAM for a long time.
+
+The first groundbreaking real-time SLAM using BA is parallel tracking and mapping (PTAM) by Klein and Murray in 2007. This algorithm provides effective and straightforward methods for feature matching, point triangulation, and tracking failure.  However, it is limited to small-scale operation because it has no loop closing part and low invariance to the viewpoint of relocalization. ORB-SLAM is built on the main ideas of PTAM, and have a significant improvement on the Weakness.
+
+\subsection{Place Recognition}
+According to the survey by Williams, the image-to-image matching scales generally better than map-to-map or image-to-map methods. A bag of words technique DBoW2 is used for the first time bags of binary words obtained from BRIEF descriptors to reduce the time needed for feature extraction. ORB-SLAM proposed in a bag of words place recognizer built on DBoW2with ORB, which has a tremendous speed of feature extraction and loop candidate detection.
+
+\subsection{Keyframes and its selection}
+Keyframe is an essential definition of ORB-SLAM. Many important procedures, such as triangulation of map points in local mapping and loop detection in loop closing, are based only on Keyframes. Generally, the less the Keyframes, the less the drift accumulated. However, if keyframes are too sparse, it has a high possibility of lost tracking. A reliable criterion to select keyframe is introduced in section \ref{section3}.
+
+\subsection{Covisibility and Essential Graph}
+Globally, a SLAM system can capture many keyframes. A proper way is to store these keyframes into a covisibility graph. Like its name, the covisibility graph build edge between two keyframes, when they have many covisible map points. Each edge has weight, which means how many covisible points the two keyframes have.
+
+The essential graph is global. It simplifies the covisibility graph by subtracting edges with weights less than 100. By use of an essential graph, the loop closing can process more efficiently. The way to construct a covisibility graph and an essential graph is shown intuitively in figure \ref{covisibility_essential_graph}.
+%
+\begin{figure}[!htbp]%
+\centering
+\includegraphics[scale=0.148]{./images/covisibility_essential_graph}
+\caption{The mechanism of how to construct a covisibility graph from keyframes and how to construct an essential graph from the covisibility graph.}
+\label{covisibility_essential_graph}
+\end{figure}
+%
+
+\subsection{Feature Choice}
+ORB feature is one of ORB-SLAM's main contributions. As shown in table \ref{feature_extraction_time}, Oriented FAST and Rotated BRIEF (ORB) has a tremendous advantage in computation efficiency over commonly used feature detector SIFT and SURF. The performance also meets the requirement of a real-time SLAM system.
+%
+\begin{table}[h!]
+\caption{Feature extraction time of a single frame}
+\label{feature_extraction_time}
+\centering
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Detector & ORB & SIFT & SURF \\ 
+ \hline
+ Time per frame (ms)& 15.3 & 217.3 & 5228.7\\ 
+ \hline
+\end{tabular}
+\end{table}
+%
+
+Features from Accelerated Segment Test (FAST) detector has sufficient computation efficiency. However, FAST is not invariant to rotation and scaling. Figure \ref{oriented_fast} shows the procedure from normal FAST to a scale-invariant oriented FAST. 
+%
+\begin{figure}[!htbp]%
+\centering
+\includegraphics[scale=0.14]{./images/Oriented_FAST}
+\caption{The procedure for building Oriented FAST. The Image pyramid makes FAST scale-invariant. Intensity centroid around feature point computes orientation and makes FAST rotation-invariant}
+\label{oriented_fast}
+\end{figure}
+%
+
+Binary Robust Independent Elementary Features (BRIEF) is a feature descriptor, which describes the key-point with binary vector. Associated with the orientation from feature detector, BRIEF can describe key-point with orientation, which makes BRIEF to Oriented BRIEF. Figure\ref{point_correspondence} shows the matching result of 2 images using ORB.
+
+%
+\begin{figure}[!htbp]%
+\centering
+\includegraphics[scale=0.17]{./images/Point_correspondence}
+\caption{Feature point matching using ORB}
+\label{point_correspondence}
+\end{figure}
+%
+
+In general, ORB is extremely fast to compute and match. It is feasible to match points with a large baseline because it has good invariance to viewpoint. Due to these advantages, ORB is a perfect detector and descriptor in a real-time SLAM system. 
+
+
+\section{System Overview}
+\label{section3}
+The ORB-SLAM system, see an overview in Figure \ref{system_overview}, contains three threads that run in parallel: tracking, local mapping, and loop closing.
+
+\begin{figure}[!htbp]%
+\centering
+\includegraphics[scale=0.22]{./images/System_overview}
+\caption{ORB-SLAM system overview, showing all the steps performed by the
+tracking, local mapping, and loop closing threads. The main components of the
+place recognition module and the map are also shown.}
+\label{system_overview}
+\end{figure}
+
+In the tracking step, the SLAM system extracts ORB features and estimates the initial pose of the camera. In addition, once tracking is lost,  the place recognition module is used to perform a global reconstruction. In this step, the system also has to decide whether the current frame is a keyframe. 
+
+Local mapping processes the information of keyframes. It performs a local BA to have an optimal reconstruction of the surrounding of the camera locally. The unmatched ORB features are searched in the covisibility graph to triangulate new map points, which is especially meaningful in the reconstruction step.
+
+The loop closing searches for loops with every new keyframe. Once a loop is detected, the system computes a similarity transformation to calculate the drift accumulated in the loop. Duplicated map points are fused according to the accumulated drift.
+
+
+\subsection{Tracking}
+Tracking thread performs with every frame from the camera. It consists of several steps.
+\subsubsection{Automatic Map Initialization}
+As known to all, the BA method needs proper initialization. The goal of the map initialization is to compute relative pose between two frames and triangulate an initial set of map points.
+
+There are two models in general: Homography $\textbf{H}_{cr}$ for planar scene and fundamental matrix $\textbf{F}_{cr}$ for nonplanar scene. The system computes the score for each model M simultaneously with equation
+%
+\begin{equation}
+S_M = \sum_i(\rho_M(d_{cr}^2(x_c^i,x_r^i,M)))+\rho_M(d_{rc}^2(x_c^i, x_r^i, M))
+\end{equation}
+%
+Then a robust heuristc is found to compute
+%
+\begin{equation}
+R_H = \frac{S_H}{S_H+S_F}
+\end{equation}
+%
+The homography is selected when $R_{H}>0.45$ , which adequately captures the planar and low parallax cases. Otherwise, the fundamental matrix is selected. Once a model is selected, it is easy to triangulate initial map points. After that, a full BA is performed to refine the initial reconstruction.
+
+Figure \ref{initialization_step} shows how the ORB-SLAM system automatically generates map points. ORB-features are extracted and marked in the left subfigure. After a proper selection of model, map points are reconstructed as in the right subfigure.
+
+\begin{figure}[!htbp]%
+\centering
+\includegraphics[scale=0.185]{./images/initialization_step}
+\caption{Automatic map initialization step of ORB-SLAM, uses fundamental matrix since it has detected enough parallax.}
+\label{initialization_step}
+\end{figure}
+
+
+\subsubsection{Initial Pose Estimation}
+If tracking is successful, a constant velocity motion model is used to predict the camera pose and a guided search of the map points observed in the last frame. If tracking is lost, fame must be converted into bag of words and query the recognition database for keyframe candidates for global relocalization.
+
+\subsubsection{Track Local Map}
+Once the estimated camera pose and an initial set of feature match available, it is possible to project the map into the frame to search more map correspondences. The camera pose is finally optimized with the all map points found in the frame.
+
+\subsubsection{New Keyframe Decision}
+The last step of Tracking is to decide if the current frame is selected as a new keyframe. As mentioned in section \ref{section_introduction}, the criterion of new keyframe selection is one of six main contributions of ORB-SLAM. To insert a new keyframe, the following conditions must be met.
+\begin{itemize}
+\item Current frame at least 50 points
+\item Current frame tracks less than $90\%$ points than reference frame.
+\item More than 20 frames have passed since last global relocalization
+\item More than 20 frames have passed since last key frame insertion
+\end{itemize}
+
+
+\subsection{Local Mapping}
+Local Mapping thread performs with every new keyframe $K_i$ from tracking thread.
+
+\subsubsection{Keyframe insertion}
+Once a new frame is decided as a keyframe, it should be added into the covisibility graph. 
+
+%
+\begin{figure}[!htbp]%
+\centering
+\includegraphics[scale=0.25]{./images/covisibility_graph}
+\caption{A covisibility graph of ORB-SLAM after loop closing}
+\label{covisibility_graph}
+\end{figure}
+%
+Figure \ref{covisibility_graph} shows a covisibility graph of ORB-SLAM in NewCollege dataset. After that, the bags of words' representation of the keyframe is computed, which will help triangulate new points in the data association.
+
+\subsubsection{Recent Map Points Culling}
+To ensure the reconstructed map points are trackable and not wrongly triangulated, they must fulfill these restrictive conditions.
+%
+\begin{itemize}
+\item The tracking must find the point in more than $25\%$ of the frames in which it is predicted to be visible.
+\item If more than one keyframe  have passed from map point creation, it must be observed from at least three keyframes.
+\end{itemize}
+%
+\subsubsection{New Map Points Creation}
+New map points are created by triangulating ORB from connected keyframes in the covisibility graph. It is worth mentioning that the positive depth in both cameras, parallax, reprojection error, and scale consistency is checked to accept the new points.
+
+%
+\begin{figure}[!htbp]%
+\centering
+\includegraphics[scale=0.3]{./images/local_mapping}
+\caption{Local mapping step creates new map points and processes local BA in the current keyframe and connected keyframes in the covisibility graph}
+\label{Local mapping}
+\end{figure}
+%
+
+\subsubsection{Local Bundle Adjustment}
+The local BA processes the current keyframe, all the keyframes connected to it in the covisibility graph, and all map points observed in these keyframes. Figure \ref{Local mapping} shows intuitively how the ORB-SLAM processes local mapping based on a new added keyframe.
+
+\subsubsection{Local Keyframe Culling}
+To maintain a compact reconstruction, the local mapping tries to detect redundant keyframes and delete them. A keyframe is discarded, when $90\%$ of map points have been seen in at least other three keyframes in the same or
+finer scale.
+
+Keyframe culling is an advantage over PTAM. As shown in figure \ref{KF_culling}, PTAM is always inserting keyframes, while ORB-SLAM is able to prune redundant keyframes and maintain a map with proper size. 
+%
+\begin{figure}[!htbp]%
+\centering
+\includegraphics[scale=0.18]{./images/PTAM_ORB_KF_CULLING}
+\caption{Comparsion of PTAM and ORB-SLAM in a static environment where the camera is always looking at the same place from different viewpoints.}
+\label{KF_culling}
+\end{figure}
+%
+
+\subsection{Loop Closing}
+The loop closing thread processes the last keyframe from local mapping threads and tries to detect and close loops.
+\subsubsection{Loop Candidates Detection}
+A similarity score is computed between the bag of words vector of current keyframe and all its neighbbors in the covisibility graph. The lowest similarity score $s_{min}$ is retained. According to the similarity score it is possible to find several loop candidates.
+%
+\begin{figure}[!htbp]%
+\centering
+\includegraphics[scale=0.19]{./images/loop_detection}
+\caption{The mechanism of loop candidates detection, similarity scores is computed between current frame and its neighbors in the covisibility graph. Loop candidates is the frame with lowest similarity score.}
+\label{loop_detection}
+\end{figure}
+%
+
+\subsubsection{Compute the Similarity Transformation}
+In monocular SLAM, there are seven DoFs in which the map can drift: three translations, three rotations, and a scale factor. To compute the accumulated drift in the loop, it is needed to transform the current keyframe into the loop keyframe with a similarity transformation. This step also serves as a geometrical validation of the loop.
+
+\subsubsection{Loop Fusion}
+After the current frame is transformed and the accumulated drift is computed, the loop fusion step fuses duplicated map points and insert new edges in the covisibility graph. All keyframes involved in the fusion will update their edges in the covisibility graph, effectively creating edges that attach the loop closure.
+
+\subsubsection{Essential Graph Optimization}
+To process the loop closing more efficiently, an essential graph optimization is used in the loop correction step. The experiment result of ORB-SLAM shows that the essential pose optimization is so accurate that an additional full BA optimization barely improves the solution. After the optimization, each map point is transformed according to the correction of one of the keyframes that observe it. Figure \ref{pose_optimization} shows an intuitive example of how to process the pose graph optimization on a small loop.
+
+%
+\begin{figure}[!htbp]%
+\centering
+\includegraphics[scale=0.23]{./images/pose_optimization}
+\caption{An example of pose optimization on an essential graph, shows pose 2 and pose 6 are potential loop closure. Pose graph optimization optimizes the pose of keyframes using reprojection error.}
+\label{pose_optimization}
+\end{figure}
+%
+
+
+\section{Experiment}
 
 Before you begin to format your paper, first write and save the content as a separate text file. Keep your text and graphic files separate until after the text has been formatted and styled. Do not use hard tabs, and limit use of hard returns to only one return at the end of a paragraph. Do not add any kind of pagination anywhere in the paper. Do not number text heads-the template will do that for you.
 
