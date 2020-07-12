@@ -1,0 +1,751 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.19)  11 JUL 2020 20:31
+entering extended mode
+**./Backup.tex
+(Backup.tex
+LaTeX2e <2019-10-01>
+(ieeeconf.cls
+Document Class: ieeeconf 2016/4/23 revision V1.6b by Pradeep Misra
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpcountA=\count80
+\@IEEEtrantmpcountB=\count81
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 7
+94.
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1ptm.fd"
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+\@IEEEnormalsizefontbaselineskip=\skip41
+-- This is a 10 point document.
+\normalsizebaselineskip=\skip42
+\normaljot=\skip43
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <16> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
+
+\IEEEilabelindentA=\dimen104
+\IEEEilabelindentB=\dimen105
+\IEEEilabelindent=\dimen106
+\IEEEelabelindent=\dimen107
+\IEEEdlabelindent=\dimen108
+\labelindent=\dimen109
+\IEEEiednormlabelsep=\dimen110
+\IEEEiedmathlabelsep=\dimen111
+\IEEEiedtopsep=\skip44
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@IEEEsubequation=\count86
+\abovecaptionskip=\skip45
+\belowcaptionskip=\skip46
+\c@figure=\count87
+\c@table=\count88
+\@IEEEeqnnumcols=\count89
+\@IEEEeqncolcnt=\count90
+\@IEEEtmpitemindent=\dimen112
+\c@biography=\count91
+\@IEEEtranrubishbin=\box27
+)
+** ATTENTION: Overriding command lockouts (line 9).
+** ATTENTION: Overriding IEEE standard margins (line 12).
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.st
+y"
+Package: caption 2019/09/01 v3.3d Customizing captions (AR)
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.s
+ty"
+Package: caption3 2019/09/01 v1.8d caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.st
+y"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+\captionmargin=\dimen113
+\captionmargin@=\dimen114
+\captionwidth=\dimen115
+\caption@tempdima=\dimen116
+\caption@indent=\dimen117
+\caption@parindent=\dimen118
+\caption@hangindent=\dimen119
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \begin {center}{\footnotesize #1}\\{\footnotesize \scshape #2}\end {c
+enter}\@IEEEtablecaptionsepspace \else \@IEEEfigurecaptionsepspace \setbox \@te
+mpboxa \hbox {\footnotesize #1.~~ #2}\ifdim \wd \@tempboxa >\hsize \setbox \@te
+mpboxa \hbox {\footnotesize #1.~~ }\parbox [t]{\hsize }{\footnotesize \noindent
+ \unhbox \@tempboxa #2}\else \ifcenterfigcaptions \hbox to\hsize {\footnotesize
+ \hfil \box \@tempboxa \hfil }\else \hbox to\hsize {\footnotesize \box \@tempbo
+xa \hfil }\fi \fi \fi .
+\c@caption@flags=\count92
+\c@ContinuedFloat=\count93
+)
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.
+sty"
+\lst@mode=\count94
+\lst@gtempboxa=\box28
+\lst@token=\toks16
+\lst@length=\count95
+\lst@currlwidth=\dimen120
+\lst@column=\count96
+\lst@pos=\count97
+\lst@lostspace=\dimen121
+\lst@width=\dimen122
+\lst@newlines=\count98
+\lst@lineno=\count99
+\lst@maxwidth=\dimen123
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.s
+ty"
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count100
+\lst@skipnumbers=\count101
+\lst@framebox=\box29
+)
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.
+cfg"
+File: listings.cfg 2019/09/10 1.8c listings configuration
+))
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.
+sty"
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.s
+ty"
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+)
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.
+sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.
+sty"
+Package: graphics 2019/07/20 v1.3b Standard LaTeX Graphics (DPC,SPQR)
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graph
+ics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdfte
+x.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen124
+\Gin@req@width=\dimen125
+)
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblatex.
+sty"
+Package: biblatex 2019/08/31 v3.13a programmable bibliographies (PK/MW)
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdftexc
+mds.sty"
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infware
+rr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifluate
+x.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds
+.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.s
+ty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.
+sty"
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count102
+)
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoptions
+.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvsetke
+ys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etexcmd
+s.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+)))
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.sty"
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count103
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.def"
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+)) ("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty
+"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) ("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count104
+\c@listtotal=\count105
+\c@listcount=\count106
+\c@liststart=\count107
+\c@liststop=\count108
+\c@citecount=\count109
+\c@citetotal=\count110
+\c@multicitecount=\count111
+\c@multicitetotal=\count112
+\c@instcount=\count113
+\c@maxnames=\count114
+\c@minnames=\count115
+\c@maxitems=\count116
+\c@minitems=\count117
+\c@citecounter=\count118
+\c@maxcitecounter=\count119
+\c@savedcitecounter=\count120
+\c@uniquelist=\count121
+\c@uniquename=\count122
+\c@refsection=\count123
+\c@refsegment=\count124
+\c@maxextratitle=\count125
+\c@maxextratitleyear=\count126
+\c@maxextraname=\count127
+\c@maxextradate=\count128
+\c@maxextraalpha=\count129
+\c@abbrvpenalty=\count130
+\c@highnamepenalty=\count131
+\c@lownamepenalty=\count132
+\c@maxparens=\count133
+\c@parenlevel=\count134
+\blx@tempcnta=\count135
+\blx@tempcntb=\count136
+\blx@tempcntc=\count137
+\blx@maxsection=\count138
+\blx@maxsegment@0=\count139
+\blx@notetype=\count140
+\blx@parenlevel@text=\count141
+\blx@parenlevel@foot=\count142
+\blx@sectionciteorder@0=\count143
+\blx@entrysetcounter=\count144
+\labelnumberwidth=\skip47
+\labelalphawidth=\skip48
+\biblabelsep=\skip49
+\bibitemsep=\skip50
+\bibnamesep=\skip51
+\bibinitsep=\skip52
+\bibparsep=\skip53
+\bibhang=\skip54
+\blx@bcfin=\read1
+\blx@bcfout=\write3
+\blx@langwohyphens=\language82
+\c@mincomprange=\count145
+\c@maxcomprange=\count146
+\c@mincompwidth=\count147
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-dm.de
+f"
+File: blx-dm.def 2019/08/31 v3.13a biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count148
+\c@savedafterword=\count149
+\c@annotator=\count150
+\c@savedannotator=\count151
+\c@author=\count152
+\c@savedauthor=\count153
+\c@bookauthor=\count154
+\c@savedbookauthor=\count155
+\c@commentator=\count156
+\c@savedcommentator=\count157
+\c@editor=\count158
+\c@savededitor=\count159
+\c@editora=\count160
+\c@savededitora=\count161
+\c@editorb=\count162
+\c@savededitorb=\count163
+\c@editorc=\count164
+\c@savededitorc=\count165
+\c@foreword=\count166
+\c@savedforeword=\count167
+\c@holder=\count168
+\c@savedholder=\count169
+\c@introduction=\count170
+\c@savedintroduction=\count171
+\c@namea=\count172
+\c@savednamea=\count173
+\c@nameb=\count174
+\c@savednameb=\count175
+\c@namec=\count176
+\c@savednamec=\count177
+\c@translator=\count178
+\c@savedtranslator=\count179
+\c@shortauthor=\count180
+\c@savedshortauthor=\count181
+\c@shorteditor=\count182
+\c@savedshorteditor=\count183
+\c@labelname=\count184
+\c@savedlabelname=\count185
+\c@institution=\count186
+\c@savedinstitution=\count187
+\c@lista=\count188
+\c@savedlista=\count189
+\c@listb=\count190
+\c@savedlistb=\count191
+\c@listc=\count192
+\c@savedlistc=\count193
+\c@listd=\count194
+\c@savedlistd=\count195
+\c@liste=\count196
+\c@savedliste=\count197
+\c@listf=\count198
+\c@savedlistf=\count199
+\c@location=\count266
+\c@savedlocation=\count267
+\c@organization=\count268
+\c@savedorganization=\count269
+\c@origlocation=\count270
+\c@savedoriglocation=\count271
+\c@origpublisher=\count272
+\c@savedorigpublisher=\count273
+\c@publisher=\count274
+\c@savedpublisher=\count275
+\c@language=\count276
+\c@savedlanguage=\count277
+\c@origlanguage=\count278
+\c@savedoriglanguage=\count279
+\c@pageref=\count280
+\c@savedpageref=\count281
+\shorthandwidth=\skip55
+\shortjournalwidth=\skip56
+\shortserieswidth=\skip57
+\shorttitlewidth=\skip58
+\shortauthorwidth=\skip59
+\shorteditorwidth=\skip60
+\locallabelnumberwidth=\skip61
+\locallabelalphawidth=\skip62
+\localshorthandwidth=\skip63
+\localshortjournalwidth=\skip64
+\localshortserieswidth=\skip65
+\localshorttitlewidth=\skip66
+\localshortauthorwidth=\skip67
+\localshorteditorwidth=\skip68
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-compa
+t.def"
+File: blx-compat.def 2019/08/31 v3.13a biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load BibTeX backend compatibility...
+Package biblatex Info: ... file 'blx-bibtex.def' found.
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-bibte
+x.def"
+File: blx-bibtex.def 2019/08/31 v3.13a biblatex compatibility (PK/MW)
+
+
+Package biblatex Warning: Using fall-back BibTeX(8) backend:
+(biblatex)                functionality may be reduced/unavailable.
+
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblatex.
+def"
+File: biblatex.def 2019/08/31 v3.13a biblatex compatibility (PK/MW)
+\c@textcitecount=\count282
+\c@textcitetotal=\count283
+\c@textcitemaxnames=\count284
+\c@biburlbigbreakpenalty=\count285
+\c@biburlbreakpenalty=\count286
+\c@biburlnumpenalty=\count287
+\c@biburlucpenalty=\count288
+\c@biburllcpenalty=\count289
+\biburlbigskip=\muskip11
+\biburlnumskip=\muskip12
+\biburlucskip=\muskip13
+\biburllcskip=\muskip14
+\c@smartand=\count290
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\numer
+ic.bbx"
+File: numeric.bbx 2019/08/31 v3.13a biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\stand
+ard.bbx"
+File: standard.bbx 2019/08/31 v3.13a biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count291
+\c@bbx:relatedtotal=\count292
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/cbx\numer
+ic.cbx"
+File: numeric.cbx 2019/08/31 v3.13a biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblatex.
+cfg"
+File: biblatex.cfg 
+))
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/lbx\engli
+sh.lbx"
+File: english.lbx 2019/08/31 v3.13a biblatex localization (PK/MW)
+)
+\@quotelevel=\count293
+\@quotereset=\count294
+ (Backup.aux)
+\openout1 = `Backup.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count295
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
+df.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count296
+\scratchdimen=\dimen126
+\scratchbox=\box30
+\nofMPsegments=\count297
+\nofMParguments=\count298
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count299
+\MPscratchDim=\dimen127
+\MPnumerator=\count300
+\makeMPintoPDFobject=\count301
+\everyMPtoPDFconversion=\toks18
+)
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-
+base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.st
+y"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvdefin
+ekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+Package biblatex Info: Input encoding 'utf8' specified.
+Package biblatex Info: Data encoding 'utf8' specified.
+(biblatex)             No need to reencode data.
+\openout3 = `Backup-blx.bib'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'Backup.bbl' found.
+ (Backup.bbl)
+Package biblatex Info: Reference section=0 on input line 45.
+Package biblatex Info: Reference segment=0 on input line 45.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <11> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7.69997> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.5> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 49.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 4
+9.
+
+("D:\Users\herrh\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+<./images/Main_structure.png, id=1, 1390.19376pt x 403.5075pt>
+File: ./images/Main_structure.png Graphic file (type png)
+<use ./images/Main_structure.png>
+Package pdftex.def Info: ./images/Main_structure.png  used on input line 71.
+(pdftex.def)             Requested size: 243.28755pt x 70.61487pt.
+
+Underfull \hbox (badness 3407) in paragraph at lines 67--77
+[]\OT1/ptm/m/n/10 ORB-SLAM [8] is a state-of-the-art vi-sual SLAM
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--77
+
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 80.
+[1{C:/Users/herrh/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+ <./images/Main_structure.png>]
+<./images/covisibility_essential_graph.png, id=16, 1693.32625pt x 643.40375pt>
+File: ./images/covisibility_essential_graph.png Graphic file (type png)
+<use ./images/covisibility_essential_graph.png>
+Package pdftex.def Info: ./images/covisibility_essential_graph.png  used on inp
+ut line 110.
+(pdftex.def)             Requested size: 250.6032pt x 95.22029pt.
+
+Overfull \hbox (4.88509pt too wide) in paragraph at lines 110--111
+ [][] 
+ []
+
+<./images/Oriented_FAST.png, id=17, 1768.6075pt x 519.9425pt>
+File: ./images/Oriented_FAST.png Graphic file (type png)
+<use ./images/Oriented_FAST.png>
+Package pdftex.def Info: ./images/Oriented_FAST.png  used on input line 139.
+(pdftex.def)             Requested size: 247.60336pt x 72.79144pt.
+
+Overfull \hbox (1.88525pt too wide) in paragraph at lines 139--140
+ [][] 
+ []
+
+<./images/Point_correspondence.png, id=18, 1434.35875pt x 528.97626pt>
+File: ./images/Point_correspondence.png Graphic file (type png)
+<use ./images/Point_correspondence.png>
+Package pdftex.def Info: ./images/Point_correspondence.png  used on input line 
+150.
+(pdftex.def)             Requested size: 243.83777pt x 89.92477pt.
+<./images/System_overview.png, id=19, 1116.17pt x 890.32625pt>
+File: ./images/System_overview.png Graphic file (type png)
+<use ./images/System_overview.png>
+Package pdftex.def Info: ./images/System_overview.png  used on input line 164.
+(pdftex.def)             Requested size: 245.55815pt x 195.87238pt.
+[2 <./images/covisibility_essential_graph.png> <./images/Oriented_FAST.png> <./
+images/Point_correspondence.png> <./images/System_overview.png>]
+<./images/initialization_step.png, id=27, 1332.98pt x 530.98375pt>
+File: ./images/initialization_step.png Graphic file (type png)
+<use ./images/initialization_step.png>
+Package pdftex.def Info: ./images/initialization_step.png  used on input line 2
+02.
+(pdftex.def)             Requested size: 246.59744pt x 98.23045pt.
+
+Overfull \hbox (0.87933pt too wide) in paragraph at lines 202--203
+ [][] 
+ []
+
+<./images/covisibility_graph.png, id=28, 521.95pt x 476.78125pt>
+File: ./images/covisibility_graph.png Graphic file (type png)
+<use ./images/covisibility_graph.png>
+Package pdftex.def Info: ./images/covisibility_graph.png  used on input line 23
+3.
+(pdftex.def)             Requested size: 130.48717pt x 119.195pt.
+<./images/local_mapping.png, id=29, 724.7075pt x 428.60126pt>
+File: ./images/local_mapping.png Graphic file (type png)
+<use ./images/local_mapping.png>
+Package pdftex.def Info: ./images/local_mapping.png  used on input line 255.
+(pdftex.def)             Requested size: 217.41393pt x 128.58136pt.
+[3 <./images/initialization_step.png> <./images/covisibility_graph.png>]
+<./images/PTAM_ORB_KF_CULLING.png, id=40, 1279.78125pt x 565.11125pt>
+File: ./images/PTAM_ORB_KF_CULLING.png Graphic file (type png)
+<use ./images/PTAM_ORB_KF_CULLING.png>
+Package pdftex.def Info: ./images/PTAM_ORB_KF_CULLING.png  used on input line 2
+72.
+(pdftex.def)             Requested size: 230.35068pt x 101.71562pt.
+<./images/loop_detection.png, id=41, 806.01125pt x 546.04pt>
+File: ./images/loop_detection.png Graphic file (type png)
+<use ./images/loop_detection.png>
+Package pdftex.def Info: ./images/loop_detection.png  used on input line 285.
+(pdftex.def)             Requested size: 153.14372pt x 103.74867pt.
+<./images/pose_optimization.png, id=42, 629.35126pt x 577.15625pt>
+File: ./images/pose_optimization.png Graphic file (type png)
+<use ./images/pose_optimization.png>
+Package pdftex.def Info: ./images/pose_optimization.png  used on input line 303
+.
+(pdftex.def)             Requested size: 144.74774pt x 132.74313pt.
+
+[4 <./images/local_mapping.png> <./images/PTAM_ORB_KF_CULLING.png> <./images/lo
+op_detection.png> <./images/pose_optimization.png>]
+<./images/NewCollege.png, id=50, 470.50781pt x 560.0925pt>
+File: ./images/NewCollege.png Graphic file (type png)
+<use ./images/NewCollege.png>
+Package pdftex.def Info: ./images/NewCollege.png  used on input line 322.
+(pdftex.def)             Requested size: 174.08516pt x 207.23097pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5 <./images/NewCollege.png>]
+<./images/ORB_example.png, id=54, 1924.18875pt x 1081.03876pt>
+File: ./images/ORB_example.png Graphic file (type png)
+<use ./images/ORB_example.png>
+Package pdftex.def Info: ./images/ORB_example.png  used on input line 445.
+(pdftex.def)             Requested size: 246.30707pt x 138.37907pt.
+
+Overfull \hbox (0.58896pt too wide) in paragraph at lines 445--446
+ [][] 
+ []
+
+[6 <./images/ORB_example.png>]
+<./images/semantic_slam.png, id=59, 1750.54pt x 557.08125pt>
+File: ./images/semantic_slam.png Graphic file (type png)
+<use ./images/semantic_slam.png>
+Package pdftex.def Info: ./images/semantic_slam.png  used on input line 473.
+(pdftex.def)             Requested size: 245.07393pt x 77.99084pt.
+ [7 <./images/semantic_slam.png>]
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the US letter (8.5in X 11in) paper size.
+
+[8
+
+] (Backup.aux)
+Package logreq Info: Writing requests to 'Backup.run.xml'.
+\openout1 = `Backup.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 12110 strings out of 492452
+ 217215 string characters out of 3120063
+ 478247 words of memory out of 3000000
+ 16368 multiletter control sequences out of 15000+200000
+ 39227 words of font info for 77 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 39i,9n,51p,828b,1555s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/Users/herrh/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
+}<D:/Users/herrh/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmex10.pfb><D:/Users/herrh/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb><D:/Users/herrh/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Users/herrh/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Users/herrh/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Users/herrh/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Us
+ers/herrh/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8
+.pfb><D:/Users/herrh/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmsy7.pfb><D:/Users/herrh/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+urw/courier/ucrr8a.pfb><D:/Users/herrh/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/urw/times/utmb8a.pfb><D:/Users/herrh/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/urw/times/utmbi8a.pfb><D:/Users/herrh/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/urw/times/utmr8a.pfb><D:/Users/herrh/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Backup.pdf (8 pages, 7442284 bytes).
+PDF statistics:
+ 110 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+

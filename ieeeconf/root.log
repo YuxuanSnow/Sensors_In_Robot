@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.2.2)  5 JUL 2020 11:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.2.2)  11 JUL 2020 18:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -172,7 +172,38 @@ Package subfig Warning: Your document class has a bad definition
 \c@lotdepth=\count98
 \sf@top=\skip50
 \sf@bottom=\skip51
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count99
+\lst@gtempboxa=\box27
+\lst@token=\toks16
+\lst@length=\count100
+\lst@currlwidth=\dimen121
+\lst@column=\count101
+\lst@pos=\count102
+\lst@lostspace=\dimen122
+\lst@width=\dimen123
+\lst@newlines=\count103
+\lst@lineno=\count104
+\lst@maxwidth=\dimen124
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count105
+\lst@skipnumbers=\count106
+\lst@framebox=\box28
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
@@ -189,13 +220,13 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen121
-\Gin@req@width=\dimen122
+\Gin@req@height=\dimen125
+\Gin@req@width=\dimen126
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
-\epsfxsize=\dimen123
-\epsfysize=\dimen124
+\epsfxsize=\dimen127
+\epsfysize=\dimen128
 )
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/mathptmx.sty
 Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
@@ -246,51 +277,51 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
-\ex@=\dimen125
+\@emptytoks=\toks17
+\ex@=\dimen129
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen126
+\pmbraise@=\dimen130
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count99
+\inf@bad=\count107
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count100
-\leftroot@=\count101
+\uproot@=\count108
+\leftroot@=\count109
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count102
-\DOTSCASE@=\count103
+\classnum@=\count110
+\DOTSCASE@=\count111
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box27
-\strutbox@=\box28
-\big@size=\dimen127
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen131
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count104
-\c@MaxMatrixCols=\count105
+\macc@depth=\count112
+\c@MaxMatrixCols=\count113
 \dotsspace@=\muskip10
-\c@parentequation=\count106
-\dspbrk@lvl=\count107
-\tag@help=\toks17
-\row@=\count108
-\column@=\count109
-\maxfields@=\count110
-\andhelp@=\toks18
-\eqnshift@=\dimen128
-\alignsep@=\dimen129
-\tagshift@=\dimen130
-\tagwidth@=\dimen131
-\totwidth@=\dimen132
-\lineht@=\dimen133
-\@envbody=\toks19
+\c@parentequation=\count114
+\dspbrk@lvl=\count115
+\tag@help=\toks18
+\row@=\count116
+\column@=\count117
+\maxfields@=\count118
+\andhelp@=\toks19
+\eqnshift@=\dimen132
+\alignsep@=\dimen133
+\tagshift@=\dimen134
+\tagwidth@=\dimen135
+\totwidth@=\dimen136
+\lineht@=\dimen137
+\@envbody=\toks20
 \multlinegap=\skip53
 \multlinetaggap=\skip54
-\mathdisplay@stack=\toks20
+\mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
@@ -303,75 +334,24 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSb=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (./root.aux)
-\openout1 = `root.aux'.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2017/12/19 v3.10 programmable bibliographies (PK/JW/AB)
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: subfig package v1.3 is loaded.
-Package caption Info: End \AtBeginDocument code.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count111
-\scratchdimen=\dimen134
-\scratchbox=\box29
-\nofMPsegments=\count112
-\nofMParguments=\count113
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count114
-\MPscratchDim=\dimen135
-\MPnumerator=\count115
-\makeMPintoPDFobject=\count116
-\everyMPtoPDFconversion=\toks22
-) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
 )
 
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
@@ -380,6 +360,291 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count119
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count120
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\@xs@message=\write3
+\integerpart=\count121
+\decimalpart=\count122
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+\c@tabx@nest=\count123
+\c@listtotal=\count124
+\c@listcount=\count125
+\c@liststart=\count126
+\c@liststop=\count127
+\c@citecount=\count128
+\c@citetotal=\count129
+\c@multicitecount=\count130
+\c@multicitetotal=\count131
+\c@instcount=\count132
+\c@maxnames=\count133
+\c@minnames=\count134
+\c@maxitems=\count135
+\c@minitems=\count136
+\c@citecounter=\count137
+\c@savedcitecounter=\count138
+\c@uniquelist=\count139
+\c@uniquename=\count140
+\c@refsection=\count141
+\c@refsegment=\count142
+\c@maxextratitle=\count143
+\c@maxextratitleyear=\count144
+\c@maxextradate=\count145
+\c@maxextraalpha=\count146
+\c@abbrvpenalty=\count147
+\c@highnamepenalty=\count148
+\c@lownamepenalty=\count149
+\c@maxparens=\count150
+\c@parenlevel=\count151
+\blx@tempcnta=\count152
+\blx@tempcntb=\count153
+\blx@tempcntc=\count154
+\blx@maxsection=\count155
+\blx@maxsegment@0=\count156
+\blx@notetype=\count157
+\blx@parenlevel@text=\count158
+\blx@parenlevel@foot=\count159
+\blx@sectionciteorder@0=\count160
+\labelnumberwidth=\skip55
+\labelalphawidth=\skip56
+\biblabelsep=\skip57
+\bibitemsep=\skip58
+\bibnamesep=\skip59
+\bibinitsep=\skip60
+\bibparsep=\skip61
+\bibhang=\skip62
+\blx@bcfin=\read1
+\blx@bcfout=\write4
+\c@mincomprange=\count161
+\c@maxcomprange=\count162
+\c@mincompwidth=\count163
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count164
+\c@savedafterword=\count165
+\c@annotator=\count166
+\c@savedannotator=\count167
+\c@author=\count168
+\c@savedauthor=\count169
+\c@bookauthor=\count170
+\c@savedbookauthor=\count171
+\c@commentator=\count172
+\c@savedcommentator=\count173
+\c@editor=\count174
+\c@savededitor=\count175
+\c@editora=\count176
+\c@savededitora=\count177
+\c@editorb=\count178
+\c@savededitorb=\count179
+\c@editorc=\count180
+\c@savededitorc=\count181
+\c@foreword=\count182
+\c@savedforeword=\count183
+\c@holder=\count184
+\c@savedholder=\count185
+\c@introduction=\count186
+\c@savedintroduction=\count187
+\c@namea=\count188
+\c@savednamea=\count189
+\c@nameb=\count190
+\c@savednameb=\count191
+\c@namec=\count192
+\c@savednamec=\count193
+\c@translator=\count194
+\c@savedtranslator=\count195
+\c@shortauthor=\count196
+\c@savedshortauthor=\count197
+\c@shorteditor=\count198
+\c@savedshorteditor=\count199
+\c@labelname=\count266
+\c@savedlabelname=\count267
+\c@institution=\count268
+\c@savedinstitution=\count269
+\c@lista=\count270
+\c@savedlista=\count271
+\c@listb=\count272
+\c@savedlistb=\count273
+\c@listc=\count274
+\c@savedlistc=\count275
+\c@listd=\count276
+\c@savedlistd=\count277
+\c@liste=\count278
+\c@savedliste=\count279
+\c@listf=\count280
+\c@savedlistf=\count281
+\c@location=\count282
+\c@savedlocation=\count283
+\c@organization=\count284
+\c@savedorganization=\count285
+\c@origlocation=\count286
+\c@savedoriglocation=\count287
+\c@origpublisher=\count288
+\c@savedorigpublisher=\count289
+\c@publisher=\count290
+\c@savedpublisher=\count291
+\c@language=\count292
+\c@savedlanguage=\count293
+\c@origlanguage=\count294
+\c@savedoriglanguage=\count295
+\c@pageref=\count296
+\c@savedpageref=\count297
+\shorthandwidth=\skip63
+\shortjournalwidth=\skip64
+\shortserieswidth=\skip65
+\shorttitlewidth=\skip66
+\shortauthorwidth=\skip67
+\shorteditorwidth=\skip68
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2017/12/19 v3.10 biblatex compatibility (PK/JW/AB)
+)
+Package biblatex Info: Trying to load BibTeX backend compatibility...
+Package biblatex Info: ... file 'blx-bibtex.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-bibtex.def
+File: blx-bibtex.def 2017/12/19 v3.10 biblatex compatibility (PK/JW/AB)
+
+
+Package biblatex Warning: Using fall-back BibTeX(8) backend:
+(biblatex)                functionality may be reduced/unavailable.
+
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2017/12/19 v3.10 biblatex compatibility (PK/JW/AB)
+\c@textcitecount=\count298
+\c@textcitetotal=\count299
+\c@textcitemaxnames=\count300
+\c@biburlnumpenalty=\count301
+\c@biburlucpenalty=\count302
+\c@biburllcpenalty=\count303
+\c@smartand=\count304
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2017/12/19 v3.10 biblatex bibliography style (PK/JW/AB)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2017/12/19 v3.10 biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count305
+\c@bbx:relatedtotal=\count306
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2017/12/19 v3.10 biblatex citation style (PK/JW/AB)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+))
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
+)
+\@quotelevel=\count307
+\@quotereset=\count308
+ (./root.aux)
+\openout1 = `root.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count309
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count310
+\scratchdimen=\dimen138
+\scratchbox=\box31
+\nofMPsegments=\count311
+\nofMParguments=\count312
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count313
+\MPscratchDim=\dimen139
+\MPnumerator=\count314
+\makeMPintoPDFobject=\count315
+\everyMPtoPDFconversion=\toks23
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
 Package grfext Info: Graphics extension search list:
@@ -391,38 +656,52 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 52.
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 52
-.
+Package biblatex Info: No input encoding detected.
+(biblatex)             Assuming 'ascii'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'ascii'.
+Package biblatex Info: Input encoding 'ascii' specified.
+Package biblatex Info: Data encoding 'ascii' specified.
+(biblatex)             No need to reencode data.
+\openout4 = `root-blx.bib'.
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'root.bbl' found.
+
+(./root.bbl)
+Package biblatex Info: Reference section=0 on input line 55.
+Package biblatex Info: Reference segment=0 on input line 55.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 59.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 59
+.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 52
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 59
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 52
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 59
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 52
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 59
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.14006> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.60007> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 52.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 59.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -430,20 +709,20 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 <./images/Main_structure.png, id=1, 1390.19376pt x 403.5075pt>
 File: ./images/Main_structure.png Graphic file (type png)
 <use ./images/Main_structure.png>
-Package pdftex.def Info: ./images/Main_structure.png  used on input line 73.
+Package pdftex.def Info: ./images/Main_structure.png  used on input line 80.
 (pdftex.def)             Requested size: 243.28755pt x 70.61487pt.
 
-Underfull \hbox (badness 1769) in paragraph at lines 69--79
+Underfull \hbox (badness 1769) in paragraph at lines 76--86
 \OT1/ptm/m/n/10 and loop clo-sure de-tec-tor to es-ti-mate un-cer-tainty and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--79
+Underfull \hbox (badness 10000) in paragraph at lines 76--86
 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 82.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 89.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
@@ -452,20 +731,20 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 File: ./images/covisibility_essential_graph.png Graphic file (type png)
 <use ./images/covisibility_essential_graph.png>
 Package pdftex.def Info: ./images/covisibility_essential_graph.png  used on inp
-ut line 113.
+ut line 120.
 (pdftex.def)             Requested size: 250.6032pt x 95.22029pt.
 
-Overfull \hbox (4.88509pt too wide) in paragraph at lines 113--114
+Overfull \hbox (4.88509pt too wide) in paragraph at lines 120--121
  [][] 
  []
 
 <./images/Oriented_FAST.png, id=16, 1768.6075pt x 519.9425pt>
 File: ./images/Oriented_FAST.png Graphic file (type png)
 <use ./images/Oriented_FAST.png>
-Package pdftex.def Info: ./images/Oriented_FAST.png  used on input line 140.
+Package pdftex.def Info: ./images/Oriented_FAST.png  used on input line 149.
 (pdftex.def)             Requested size: 247.60336pt x 72.79144pt.
 
-Overfull \hbox (1.88525pt too wide) in paragraph at lines 140--141
+Overfull \hbox (1.88525pt too wide) in paragraph at lines 149--150
  [][] 
  []
 
@@ -473,12 +752,12 @@ Overfull \hbox (1.88525pt too wide) in paragraph at lines 140--141
 File: ./images/Point_correspondence.png Graphic file (type png)
 <use ./images/Point_correspondence.png>
 Package pdftex.def Info: ./images/Point_correspondence.png  used on input line 
-151.
+160.
 (pdftex.def)             Requested size: 243.83777pt x 89.92477pt.
 <./images/System_overview.png, id=18, 1116.17pt x 890.32625pt>
 File: ./images/System_overview.png Graphic file (type png)
 <use ./images/System_overview.png>
-Package pdftex.def Info: ./images/System_overview.png  used on input line 166.
+Package pdftex.def Info: ./images/System_overview.png  used on input line 175.
 (pdftex.def)             Requested size: 245.55815pt x 195.87238pt.
 [2 <./images/covisibility_essential_graph.png> <./images/Oriented_FAST.png> <./
 images/Point_correspondence.png> <./images/System_overview.png>]
@@ -486,211 +765,73 @@ images/Point_correspondence.png> <./images/System_overview.png>]
 File: ./images/initialization_step.png Graphic file (type png)
 <use ./images/initialization_step.png>
 Package pdftex.def Info: ./images/initialization_step.png  used on input line 2
-03.
+13.
 (pdftex.def)             Requested size: 246.59744pt x 98.23045pt.
 
-Overfull \hbox (0.87933pt too wide) in paragraph at lines 203--204
+Overfull \hbox (0.87933pt too wide) in paragraph at lines 213--214
  [][] 
  []
 
 <./images/covisibility_graph.png, id=27, 521.95pt x 476.78125pt>
 File: ./images/covisibility_graph.png Graphic file (type png)
 <use ./images/covisibility_graph.png>
-Package pdftex.def Info: ./images/covisibility_graph.png  used on input line 23
+Package pdftex.def Info: ./images/covisibility_graph.png  used on input line 24
 4.
 (pdftex.def)             Requested size: 130.48717pt x 119.195pt.
 <./images/local_mapping.png, id=28, 724.7075pt x 428.60126pt>
 File: ./images/local_mapping.png Graphic file (type png)
 <use ./images/local_mapping.png>
-Package pdftex.def Info: ./images/local_mapping.png  used on input line 255.
+Package pdftex.def Info: ./images/local_mapping.png  used on input line 266.
 (pdftex.def)             Requested size: 217.41393pt x 128.58136pt.
 [3 <./images/initialization_step.png> <./images/covisibility_graph.png>]
 <./images/PTAM_ORB_KF_CULLING.png, id=38, 1279.78125pt x 565.11125pt>
 File: ./images/PTAM_ORB_KF_CULLING.png Graphic file (type png)
 <use ./images/PTAM_ORB_KF_CULLING.png>
 Package pdftex.def Info: ./images/PTAM_ORB_KF_CULLING.png  used on input line 2
-72.
+83.
 (pdftex.def)             Requested size: 230.35068pt x 101.71562pt.
 <./images/loop_detection.png, id=39, 806.01125pt x 546.04pt>
 File: ./images/loop_detection.png Graphic file (type png)
 <use ./images/loop_detection.png>
-Package pdftex.def Info: ./images/loop_detection.png  used on input line 285.
+Package pdftex.def Info: ./images/loop_detection.png  used on input line 296.
 (pdftex.def)             Requested size: 153.14372pt x 103.74867pt.
 <./images/pose_optimization.png, id=40, 629.35126pt x 577.15625pt>
 File: ./images/pose_optimization.png Graphic file (type png)
 <use ./images/pose_optimization.png>
-Package pdftex.def Info: ./images/pose_optimization.png  used on input line 303
+Package pdftex.def Info: ./images/pose_optimization.png  used on input line 314
 .
 (pdftex.def)             Requested size: 144.74774pt x 132.74313pt.
 
 [4 <./images/local_mapping.png> <./images/PTAM_ORB_KF_CULLING.png> <./images/lo
 op_detection.png> <./images/pose_optimization.png>]
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
- [5]
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ð in font ptmr7t!
-Missing character: There is no Ð in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ñ in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ñ in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ð in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ñ in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ð in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ð in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ð in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ð in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ð in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ð in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ð in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
-Missing character: There is no Ò in font ptmr7t!
-Missing character: There is no Ó in font ptmr7t!
+<./images/NewCollege.png, id=48, 470.50781pt x 560.0925pt>
+File: ./images/NewCollege.png Graphic file (type png)
+<use ./images/NewCollege.png>
+Package pdftex.def Info: ./images/NewCollege.png  used on input line 334.
+(pdftex.def)             Requested size: 174.08516pt x 207.23097pt.
+ [5 <./images/NewCollege.png>]
+<./images/ORB_example.png, id=52, 1924.18875pt x 1081.03876pt>
+File: ./images/ORB_example.png Graphic file (type png)
+<use ./images/ORB_example.png>
+Package pdftex.def Info: ./images/ORB_example.png  used on input line 456.
+(pdftex.def)             Requested size: 246.30707pt x 138.37907pt.
+
+Overfull \hbox (0.58896pt too wide) in paragraph at lines 456--457
+ [][] 
+ []
+
+[6 <./images/ORB_example.png>]
+<./images/semantic_slam.png, id=57, 1750.54pt x 557.08125pt>
+File: ./images/semantic_slam.png Graphic file (type png)
+<use ./images/semantic_slam.png>
+Package pdftex.def Info: ./images/semantic_slam.png  used on input line 485.
+(pdftex.def)             Requested size: 245.07393pt x 77.99084pt.
+
+
+LaTeX Warning: Citation 'Murray.1993' on page 7 undefined on input line 504.
+
+
+LaTeX Warning: Empty bibliography on input line 507.
 
 
 ** Conference Paper **
@@ -703,29 +844,43 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the US letter (8.5in X 11in) paper size.
 
-[6] (./root.aux) ) 
+[7
+
+ <./images/semantic_slam.png>] (./root.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run BibTeX on the file(s):
+(biblatex)                root
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'root.run.xml'.
+\openout1 = `root.run.xml'.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4385 strings out of 492982
- 68047 string characters out of 6134897
- 126396 words of memory out of 5000000
- 7864 multiletter control sequences out of 15000+600000
- 65392 words of font info for 143 fonts, out of 8000000 for 9000
+ 12321 strings out of 492982
+ 209328 string characters out of 6134897
+ 466317 words of memory out of 5000000
+ 15715 multiletter control sequences out of 15000+600000
+ 66334 words of font info for 143 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,9n,39p,846b,285s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/sym
-bol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/times/utmri8a.pfb>
-Output written on root.pdf (6 pages, 4453985 bytes).
+ 36i,9n,49p,824b,1222s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/sym
+bol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+times/utmri8a.pfb>
+Output written on root.pdf (7 pages, 7387680 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 97 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

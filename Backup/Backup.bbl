@@ -1,0 +1,717 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{LSD}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=EJ}{%
+         family={Engel},
+         familyi={E\bibinitperiod},
+         given={Jakob},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ST}{%
+         family={Schoeps},
+         familyi={S\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=CD}{%
+         family={Cremers},
+         familyi={C\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{EJSTCD1}
+    \strng{fullhash}{EJSTCD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{pages}{1\bibrangedash 16}
+    \field{title}{LSD-SLAM: large-scale direct monocular SLAM}
+    \field{volume}{8690}
+    \field{journaltitle}{Eur. Conf. Comput. Vis.}
+    \field{month}{09}
+    \field{year}{2014}
+  \endentry
+
+  \entry{23}{article}{}
+    \name{author}{2}{}{%
+      {{hash=FO}{%
+         family={Faugeras},
+         familyi={F\bibinitperiod},
+         given={Olivier},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=LF}{%
+         family={Lustman},
+         familyi={L\bibinitperiod},
+         given={F.},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FOLF1}
+    \strng{fullhash}{FOLF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Motion and Structure from Motion in a Piecewise Planar
+  Environment}
+    \field{volume}{02}
+    \field{journaltitle}{International Journal of Pattern Recognition and
+  Artificial Intelligence - IJPRAI}
+    \field{month}{09}
+    \field{year}{1988}
+  \endentry
+
+  \entry{40}{article}{}
+    \name{author}{4}{}{%
+      {{hash=GA}{%
+         family={Geiger},
+         familyi={G\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+      {{hash=LP}{%
+         family={Lenz},
+         familyi={L\bibinitperiod},
+         given={P},
+         giveni={P},
+      }}%
+      {{hash=SC}{%
+         family={Stiller},
+         familyi={S\bibinitperiod},
+         given={C},
+         giveni={C},
+      }}%
+      {{hash=UR}{%
+         family={Urtasun},
+         familyi={U\bibinitperiod},
+         given={R},
+         giveni={R},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Sage Publications, Inc.}%
+    }
+    \strng{namehash}{GA+1}
+    \strng{fullhash}{GALPSCUR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{title}{Vision Meets Robotics: The KITTI Dataset}
+    \field{volume}{32}
+    \list{location}{1}{%
+      {USA}%
+    }
+    \field{year}{2013}
+  \endentry
+
+  \entry{2}{book}{}
+    \name{author}{2}{}{%
+      {{hash=HR}{%
+         family={Hartley},
+         familyi={H\bibinitperiod},
+         given={Richard},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=ZA}{%
+         family={Zisserman},
+         familyi={Z\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{HRZA1}
+    \strng{fullhash}{HRZA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{edition}{2}
+    \field{isbn}{0521540518}
+    \field{title}{Multiple View Geometry in Computer Vision}
+    \list{location}{1}{%
+      {USA}%
+    }
+    \field{year}{2003}
+  \endentry
+
+  \entry{42}{article}{}
+    \name{author}{1}{}{%
+      {{hash=HBKP}{%
+         family={Horn},
+         familyi={H\bibinitperiod},
+         given={Berthold K.\bibnamedelima P.},
+         giveni={B\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim
+  P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HBKP1}
+    \strng{fullhash}{HBKP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{pages}{629\bibrangedash 642}
+    \field{title}{Closed-form solution of absolute orientation using unit
+  quaternions}
+    \field{volume}{4}
+    \field{journaltitle}{Journal of the Optical Society of America A}
+    \field{year}{1987}
+  \endentry
+
+  \entry{PTAM}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=KG}{%
+         family={Klein},
+         familyi={K\bibinitperiod},
+         given={Georg},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Murray},
+         familyi={M\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{KGMD1}
+    \strng{fullhash}{KGMD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{booktitle}{10.1109/ISMAR.2007.4538852}
+    \field{isbn}{978-1-4244-1749-0}
+    \field{pages}{1\bibrangedash 10}
+    \field{title}{Parallel Tracking and Mapping for Small AR Workspaces}
+    \field{year}{11/13/2007 - 11/16/2007}
+  \endentry
+
+  \entry{ORBextract}{article}{}
+    \name{author}{3}{}{%
+      {{hash=LY}{%
+         family={Lei},
+         familyi={L\bibinitperiod},
+         given={Yu},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=YZ}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Zhixin},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=GY}{%
+         family={Gong},
+         familyi={G\bibinitperiod},
+         given={Yan},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LYYZGY1}
+    \strng{fullhash}{LYYZGY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{pages}{117\bibrangedash 126}
+    \field{title}{An Improved ORB Algorithm of Extracting and Matching
+  Features}
+    \field{volume}{8}
+    \field{journaltitle}{International Journal of Signal Processing, Image
+  Processing and Pattern Recognition}
+    \field{year}{2015}
+  \endentry
+
+  \entry{ORBSLAM}{article}{}
+    \name{author}{3}{}{%
+      {{hash=MAR}{%
+         family={Mur-Artal},
+         familyi={M\bibinithyphendelim A\bibinitperiod},
+         given={Raul},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=MJMM}{%
+         family={Montiel},
+         familyi={M\bibinitperiod},
+         given={J.\bibnamedelima M.\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+      }}%
+      {{hash=TJD}{%
+         family={Tardos},
+         familyi={T\bibinitperiod},
+         given={Juan\bibnamedelima D.},
+         giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MARMJMMTJD1}
+    \strng{fullhash}{MARMJMMTJD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{issn}{1552-3098}
+    \field{number}{5}
+    \field{pages}{1147\bibrangedash 1163}
+    \field{title}{ORB-SLAM: A Versatile and Accurate Monocular SLAM System}
+    \field{volume}{31}
+    \field{journaltitle}{IEEE Transactions on Robotics}
+    \field{year}{2015}
+  \endentry
+
+  \entry{ORB2}{article}{}
+    \name{author}{2}{}{%
+      {{hash=MAR}{%
+         family={Mur-Artal},
+         familyi={M\bibinithyphendelim A\bibinitperiod},
+         given={Ra\'ul},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=TJD}{%
+         family={Tard\'os},
+         familyi={T\bibinitperiod},
+         given={Juan\bibnamedelima D.},
+         giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MARTJD1}
+    \strng{fullhash}{MARTJD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{number}{5}
+    \field{pages}{1255\bibrangedash 1262}
+    \field{title}{{ORB-SLAM2}: an Open-Source {SLAM} System for Monocular,
+  Stereo and {RGB-D} Cameras}
+    \field{volume}{33}
+    \field{journaltitle}{IEEE Transactions on Robotics}
+    \field{year}{2017}
+  \endentry
+
+  \entry{14}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=ND}{%
+         family={Nister},
+         familyi={N\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SH}{%
+         family={Stewenius},
+         familyi={S\bibinitperiod},
+         given={Henrik},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE Computer Society}%
+    }
+    \strng{namehash}{NDSH1}
+    \strng{fullhash}{NDSH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{booktitle}{Proceedings of the 2006 IEEE Computer Society Conference
+  on Computer Vision and Pattern Recognition - Volume 2}
+    \field{isbn}{0769525970}
+    \field{pages}{2161–2168}
+    \field{series}{CVPR ’06}
+    \field{title}{Scalable Recognition with a Vocabulary Tree}
+    \list{location}{1}{%
+      {USA}%
+    }
+    \field{year}{2006}
+  \endentry
+
+  \entry{39}{article}{}
+    \name{author}{5}{}{%
+      {{hash=SM}{%
+         family={Smith},
+         familyi={S\bibinitperiod},
+         given={Mike},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BI}{%
+         family={Baldwin},
+         familyi={B\bibinitperiod},
+         given={Ian},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=CW}{%
+         family={Churchill},
+         familyi={C\bibinitperiod},
+         given={Winston},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=PR}{%
+         family={Paul},
+         familyi={P\bibinitperiod},
+         given={Rohan},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=NP}{%
+         family={Newman},
+         familyi={N\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Sage Publications, Inc.}%
+    }
+    \strng{namehash}{SM+1}
+    \strng{fullhash}{SMBICWPRNP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{The New College Vision and Laser Data Set}
+    \field{volume}{28}
+    \list{location}{1}{%
+      {USA}%
+    }
+    \field{year}{2009}
+  \endentry
+
+  \entry{7}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=SH}{%
+         family={{Strasdat}},
+         familyi={S\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={{Davison}},
+         familyi={D\bibinitperiod},
+         given={A.\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=MJMM}{%
+         family={{Montiel}},
+         familyi={M\bibinitperiod},
+         given={J.\bibnamedelima M.\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+      }}%
+      {{hash=KK}{%
+         family={{Konolige}},
+         familyi={K\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SH+1}
+    \strng{fullhash}{SHDAJMJMMKK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{booktitle}{2011 International Conference on Computer Vision}
+    \field{pages}{2352\bibrangedash 2359}
+    \field{title}{Double window optimisation for constant time visual SLAM}
+    \field{year}{2011}
+  \endentry
+
+  \entry{6}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=SH}{%
+         family={Strasdat},
+         familyi={S\bibinitperiod},
+         given={Hauke},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=MJMM}{%
+         family={Montiel},
+         familyi={M\bibinitperiod},
+         given={J.\bibnamedelima M.\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Davison},
+         familyi={D\bibinitperiod},
+         given={Andrew\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SHMJMMDAJ1}
+    \strng{fullhash}{SHMJMMDAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{booktitle}{In Proceedings of Robotics: Science and Systems}
+    \field{title}{Scale drift-aware large scale monocular slam}
+    \field{year}{2010}
+  \endentry
+
+  \entry{38}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=SJ}{%
+         family={{Sturm}},
+         familyi={S\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=EN}{%
+         family={{Engelhard}},
+         familyi={E\bibinitperiod},
+         given={N.},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=EF}{%
+         family={{Endres}},
+         familyi={E\bibinitperiod},
+         given={F.},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=BW}{%
+         family={{Burgard}},
+         familyi={B\bibinitperiod},
+         given={W.},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=CD}{%
+         family={{Cremers}},
+         familyi={C\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SJ+1}
+    \strng{fullhash}{SJENEFBWCD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{booktitle}{2012 IEEE/RSJ International Conference on Intelligent
+  Robots and Systems}
+    \field{pages}{573\bibrangedash 580}
+    \field{title}{A benchmark for the evaluation of RGB-D SLAM systems}
+    \field{year}{2012}
+  \endentry
+
+  \entry{1}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=TB}{%
+         family={Triggs},
+         familyi={T\bibinitperiod},
+         given={Bill},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=MPF}{%
+         family={McLauchlan},
+         familyi={M\bibinitperiod},
+         given={Philip\bibnamedelima F.},
+         giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=HRI}{%
+         family={Hartley},
+         familyi={H\bibinitperiod},
+         given={Richard\bibnamedelima I.},
+         giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=FAW}{%
+         family={Fitzgibbon},
+         familyi={F\bibinitperiod},
+         given={Andrew\bibnamedelima W.},
+         giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TB+1}
+    \strng{fullhash}{TBMPFHRIFAW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{booktitle}{Workshop on Vision Algorithms}
+    \field{title}{Bundle Adjustment - A Modern Synthesis}
+    \field{year}{1999}
+  \endentry
+
+  \entry{24}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=W}{%
+         family={{Wei Tan}},
+         familyi={W\bibinitperiod},
+      }}%
+      {{hash=H}{%
+         family={{Haomin Liu}},
+         familyi={H\bibinitperiod},
+      }}%
+      {{hash=DZ}{%
+         family={{Dong}},
+         familyi={D\bibinitperiod},
+         given={Z.},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=ZG}{%
+         family={{Zhang}},
+         familyi={Z\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=BH}{%
+         family={{Bao}},
+         familyi={B\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{W+1}
+    \strng{fullhash}{WHDZZGBH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{booktitle}{2013 IEEE International Symposium on Mixed and Augmented
+  Reality (ISMAR)}
+    \field{pages}{209\bibrangedash 218}
+    \field{title}{Robust monocular SLAM in dynamic environments}
+    \field{year}{2013}
+  \endentry
+
+  \entry{13}{article}{}
+    \name{author}{6}{}{%
+      {{hash=WB}{%
+         family={Williams},
+         familyi={W\bibinitperiod},
+         given={Brian},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Cummins},
+         familyi={C\bibinitperiod},
+         given={Mark},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=NJ}{%
+         family={Neira},
+         familyi={N\bibinitperiod},
+         given={Jos\'{e}},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=NP}{%
+         family={Newman},
+         familyi={N\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=RI}{%
+         family={Reid},
+         familyi={R\bibinitperiod},
+         given={Ian},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=TJ}{%
+         family={Tard\'{o}s},
+         familyi={T\bibinitperiod},
+         given={Juan},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {North-Holland Publishing Co.}%
+    }
+    \strng{namehash}{WB+1}
+    \strng{fullhash}{WBCMNJNPRITJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{number}{12}
+    \field{pages}{1188–1197}
+    \field{title}{A Comparison of Loop Closing Techniques in Monocular SLAM}
+    \field{volume}{57}
+    \list{location}{1}{%
+      {NLD}%
+    }
+    \field{journaltitle}{Robot. Auton. Syst.}
+    \field{month}{12}
+    \field{year}{2009}
+  \endentry
+
+  \entry{Semantic}{article}{}
+    \name{author}{6}{}{%
+      {{hash=ZL}{%
+         family={{Zhang}},
+         familyi={Z\bibinitperiod},
+         given={L.},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=WL}{%
+         family={{Wei}},
+         familyi={W\bibinitperiod},
+         given={L.},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={{Shen}},
+         familyi={S\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=WW}{%
+         family={{Wei}},
+         familyi={W\bibinitperiod},
+         given={W.},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=ZG}{%
+         family={{Zhu}},
+         familyi={Z\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={{Song}},
+         familyi={S\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZL+1}
+    \strng{fullhash}{ZLWLSPWWZGSJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{pages}{75545\bibrangedash 75559}
+    \field{title}{Semantic SLAM Based on Object Detection and Improved Octomap}
+    \field{volume}{6}
+    \field{journaltitle}{IEEE Access}
+    \field{year}{2018}
+  \endentry
+\enddatalist
+\endinput

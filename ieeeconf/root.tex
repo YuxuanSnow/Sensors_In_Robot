@@ -25,6 +25,11 @@
 \captionsetup[table]{position=bottom}
 \usepackage{subfig}
 
+\usepackage{listings}
+\lstset{language=C}
+
+
+
 % The following packages can be found on http:\\www.ctan.org
 \usepackage{graphicx} % for pdf, bitmapped graphics files
 \usepackage{epsfig} % for postscript graphics files
@@ -34,7 +39,7 @@
 \usepackage{amssymb}  % assumes amsmath package installed
 
 \title{\LARGE \bf
-ORB-SLAM
+Review of ORB-SLAM
 }
 
 
@@ -44,6 +49,8 @@ ORB-SLAM
         {\tt\small yuxuan.xue@tum.de}}%
 }
 
+\usepackage[backend=bibtex]{biblatex}
+\addbibresource{literature.bib}
 
 \begin{document}
 
@@ -57,7 +64,7 @@ ORB-SLAM
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 
-This paper is a review of ORB-SLAM, a topic in seminar sensors in robots. ORB-SLAM is a feature-based monocular simultaneous localization and mapping (SLAM) system that operates well-performed in real-time and in environments with different illumination or scaling conditions. This paper introduces how ORB-SLAM works from the algorithm level, the primary procedure, the comparison to other popular SLAM methods, and a lesson learned from the preparation of the presentation and the paper reproduction.
+This paper is a review of ORB-SLAM, a topic in seminar sensors in robots. ORB-SLAM is a feature-based monocular simultaneous localization and mapping (SLAM) system that operates well-performed in real-time and in environments with different illumination or scaling conditions. This paper introduces how ORB-SLAM works from the algorithm level, the primary procedure, the comparison to other popular SLAM methods, and a lesson learned from the preparation of the presentation and the function implementation.
 
 \end{abstract}
 
@@ -81,12 +88,12 @@ In comparison to previous SLAM methods, the ORB SLAM has the following main cont
 \begin{itemize}
 
 
-\item \textit{Features:}  ORB features allow real-time performance without GPU and provide good invariance to changes in viewpoint and illumination. Use of the same features for all tasks makes SLAM system more efficient, simple and reliable. 
-\item \textit{Covisibility Graph:} Tracking and Mapping are only focused on a local covisible area. The use of covisibility graph ensures the SLAM system's real-time operation in a large environment, independent of global map size.
-\item \textit{Essential Graph:} A spanning tree maintained by the system, loop closure links, and strong edges from the covisibility graph. Thanks to the essential graph, the SLAM system has a real-time loop closing operation.
-\item \textit{Camera relocalization:} Thanks to significant invariance to viewpoint and illumination, the System can provide real-time recovery from tracking  failure and enhancing map reuse.
-\item \textit{Map Initialization:} A new approach to select a model for the planar and nonplanar case builds an automatic and robust initialization procedure. 
-\item \textit{Map point and Keyframe selection:} A reliable approach to select keyframe and map point improves tracking robustness, and ignore redundant keyframes.
+\item Features:  ORB features allow real-time performance without GPU and provide good invariance to changes in viewpoint and illumination. Use of the same features for all tasks makes SLAM system more efficient, simple and reliable. 
+\item Covisibility Graph: Tracking and Mapping are only focused on a local covisible area. The use of covisibility graph ensures the SLAM system's real-time operation in a large environment, independent of global map size.
+\item Essential Graph: A spanning tree maintained by the system, loop closure links, and strong edges from the covisibility graph. Thanks to the essential graph, the SLAM system has a real-time loop closing operation.
+\item Camera relocalization: Thanks to significant invariance to viewpoint and illumination, the System can provide real-time recovery from tracking  failure and enhancing map reuse.
+\item Map Initialization: A new approach to select a model for the planar and nonplanar case builds an automatic and robust initialization procedure. 
+\item Map point and Keyframe selection: A reliable approach to select keyframe and map point improves tracking robustness, and ignore redundant keyframes.
 
 \end{itemize}
 
@@ -123,11 +130,13 @@ ORB feature is one of ORB-SLAM's main contributions. As shown in table \ref{feat
 \caption{Feature extraction time of a single frame}
 \label{feature_extraction_time}
 \centering
-\begin{tabular}{ |c|c|c|c| } 
+\begin{tabular}{ c c c c } 
+ \hline
  \hline
  Detector & ORB & SIFT & SURF \\ 
  \hline
  Time per frame (ms)& 15.3 & 217.3 & 5228.7\\ 
+ \hline
  \hline
 \end{tabular}
 \end{table}
@@ -180,6 +189,7 @@ The loop closing searches for loops with every new keyframe. Once a loop is dete
 \subsection{Tracking}
 Tracking thread performs with every frame from the camera. It consists of several steps.
 \subsubsection{Automatic Map Initialization}
+\label{map_init}
 As known to all, the BA method needs proper initialization. The goal of the map initialization is to compute relative pose between two frames and triangulate an initial set of map points.
 
 There are two models in general: Homography $\textbf{H}_{cr}$ for planar scene and fundamental matrix $\textbf{F}_{cr}$ for nonplanar scene. The system computes the score for each model M simultaneously with equation
@@ -239,6 +249,7 @@ Once a new frame is decided as a keyframe, it should be added into the covisibil
 Figure \ref{covisibility_graph} shows a covisibility graph of ORB-SLAM in NewCollege dataset. After that, the bags of words' representation of the keyframe is computed, which will help triangulate new points in the data association.
 
 \subsubsection{Recent Map Points Culling}
+\label{Mappoint_culling}
 To ensure the reconstructed map points are trackable and not wrongly triangulated, they must fulfill these restrictive conditions.
 %
 \begin{itemize}
@@ -307,107 +318,174 @@ To process the loop closing more efficiently, an essential graph optimization is
 %
 
 
-\section{Experiment}
+\section{Performance}
+\label{Performance}
 
-Before you begin to format your paper, first write and save the content as a separate text file. Keep your text and graphic files separate until after the text has been formatted and styled. Do not use hard tabs, and limit use of hard returns to only one return at the end of a paragraph. Do not add any kind of pagination anywhere in the paper. Do not number text heads-the template will do that for you.
+The ORB-SLAM system is tested in several well-known datasets. The validation  is performed in the dataset of NewColledge, the general performace is evaluated according to TUM RGB-D benchmark, and the localization accuracy is evaluated in the sequence from the KITTI-dataset.
 
-Finally, complete content and organizational editing before formatting. Please take note of the following items when proofreading spelling and grammar:
+\subsection{Performance in the NewColledge Dataset}
+The NewColledge Dataset contains a 2.2km sequence while robot traversing a campus and adjacent parks. It contains several loops and fast rotation that makes the sequence quite challenging for monocular vision. Therefore, the NewCollege dataset is an appropriate dataset to test the validation for monocular SLAM system. 
 
-\subsection{Abbreviations and Acronyms} Define abbreviations and acronyms the first time they are used in the text, even after they have been defined in the abstract. Abbreviations such as IEEE, SI, MKS, CGS, sc, dc, and rms do not have to be defined. Do not use abbreviations in the title or heads unless they are unavoidable.
+Figure \ref{new_college} shows the reconstruction and mapping before and after the loop closure. As shown in the figure, the ORB-SLAM can close the loop perfectly, which is not accomplished by other monocular SLAM systems in the NewCollege sequence yet.
 
-\subsection{Units}
-
-\begin{itemize}
-
-\item Use either SI (MKS) or CGS as primary units. (SI units are encouraged.) English units may be used as secondary units (in parentheses). An exception would be the use of English units as identifiers in trade, such as “3.5-inch disk drive”.
-\item Avoid combining SI and CGS units, such as current in amperes and magnetic field in oersteds. This often leads to confusion because equations do not balance dimensionally. If you must use mixed units, clearly state the units for each quantity that you use in an equation.
-\item Do not mix complete spellings and abbreviations of units: “Wb/m2” or “webers per square meter”, not “webers/m2”.  Spell out units when they appear in text: “. . . a few henries”, not “. . . a few H”.
-\item Use a zero before decimal points: “0.25”, not “.25”. Use “cm3”, not “cc”. (bullet list)
-
-\end{itemize}
-
-
-\subsection{Equations}
-
-The equations are an exception to the prescribed specifications of this template. You will need to determine whether or not your equation should be typed using either the Times New Roman or the Symbol font (please no other font). To create multileveled equations, it may be necessary to treat the equation as a graphic and insert it into the text after your paper is styled. Number equations consecutively. Equation numbers, within parentheses, are to position flush right, as in (1), using a right tab stop. To make your equations more compact, you may use the solidus ( / ), the exp function, or appropriate exponents. Italicize Roman symbols for quantities and variables, but not Greek symbols. Use a long dash rather than a hyphen for a minus sign. Punctuate equations with commas or periods when they are part of a sentence, as in
-
-$$
-\alpha + \beta = \chi \eqno{(1)}
-$$
-
-Note that the equation is centered using a center tab stop. Be sure that the symbols in your equation have been defined before or immediately following the equation. Use “(1)”, not “Eq. (1)” or “equation (1)”, except at the beginning of a sentence: “Equation (1) is . . .”
-
-\subsection{Some Common Mistakes}
-\begin{itemize}
-
-
-\item The word “data” is plural, not singular.
-\item The subscript for the permeability of vacuum ?0, and other common scientific constants, is zero with subscript formatting, not a lowercase letter “o”.
-\item In American English, commas, semi-/colons, periods, question and exclamation marks are located within quotation marks only when a complete thought or name is cited, such as a title or full quotation. When quotation marks are used, instead of a bold or italic typeface, to highlight a word or phrase, punctuation should appear outside of the quotation marks. A parenthetical phrase or statement at the end of a sentence is punctuated outside of the closing parenthesis (like this). (A parenthetical sentence is punctuated within the parentheses.)
-\item A graph within a graph is an “inset”, not an “insert”. The word alternatively is preferred to the word “alternately” (unless you really mean something that alternates).
-\item Do not use the word “essentially” to mean “approximately” or “effectively”.
-\item In your paper title, if the words “that uses” can accurately replace the word “using”, capitalize the “u”; if not, keep using lower-cased.
-\item Be aware of the different meanings of the homophones “affect” and “effect”, “complement” and “compliment”, “discreet” and “discrete”, “principal” and “principle”.
-\item Do not confuse “imply” and “infer”.
-\item The prefix “non” is not a word; it should be joined to the word it modifies, usually without a hyphen.
-\item There is no period after the “et” in the Latin abbreviation “et al.”.
-\item The abbreviation “i.e.” means “that is”, and the abbreviation “e.g.” means “for example”.
-
-\end{itemize}
-
-
-\section{USING THE TEMPLATE}
-
-Use this sample document as your LaTeX source file to create your document. Save this file as {\bf root.tex}. You have to make sure to use the cls file that came with this distribution. If you use a different style file, you cannot expect to get required margins. Note also that when you are creating your out PDF file, the source file is only part of the equation. {\it Your \TeX\ $\rightarrow$ PDF filter determines the output file size. Even if you make all the specifications to output a letter file in the source - if your filter is set to produce A4, you will only get A4 output. }
-
-It is impossible to account for all possible situation, one would encounter using \TeX. If you are using multiple \TeX\ files you must make sure that the ``MAIN`` source file is called root.tex - this is particularly important if your conference is using PaperPlaza's built in \TeX\ to PDF conversion tool.
-
-\subsection{Headings, etc}
-
-Text heads organize the topics on a relational, hierarchical basis. For example, the paper title is the primary text head because all subsequent material relates and elaborates on this one topic. If there are two or more sub-topics, the next level head (uppercase Roman numerals) should be used and, conversely, if there are not at least two sub-topics, then no subheads should be introduced. Styles named “Heading 1”, “Heading 2”, “Heading 3”, and “Heading 4” are prescribed.
-
-\subsection{Figures and Tables}
-
-Positioning Figures and Tables: Place figures and tables at the top and bottom of columns. Avoid placing them in the middle of columns. Large figures and tables may span across both columns. Figure captions should be below the figures; table heads should appear above the tables. Insert figures and tables after they are cited in the text. Use the abbreviation “Fig. 1”, even at the beginning of a sentence.
-
-\begin{table}[h]
-\caption{An Example of a Table}
-\label{table_example}
-\begin{center}
-\begin{tabular}{|c||c|}
+%
+\begin{figure}[!htbp]%
+\centering
+\includegraphics[scale=0.37]{./images/NewCollege}
+\caption{Map before and after loop closing in the NewCollege dataset. The trajectory is drawn in green and the loop closing match is drawn in blue.}
+\label{new_college}
+\end{figure}
+%
+Besides, ORB-SLAM has excellent efficiency in tracking and mapping threads. Table \ref{Efficiency_Newcollege} shows the time cost of tracking and mapping of ORB-SLAM in the NewCollege dataset. It takes only 31.6 ms for the tracking thread, which meets the requirement of real-time operation. Local BA takes over 300 ms. However, it is a nonlinear optimization process, which does not need to run simultaneously. Therefore, ORB-SLAM is a well-performed real-time localization method.
+%
+\begin{table}[h!]
+\caption{Tracking and Mapping Time in NewCollege}
+\label{Efficiency_Newcollege}
+\centering
+\begin{tabular}{ l l c } 
 \hline
-One & Two\\
+ \hline
+ Thread & Operation & Mean (ms) \\ 
+ \hline
+ Tracking & ORB Extraction & 11.42\\ 
+ 		  & Initial Pose Estimation & 3.45\\ 
+ 		  & Track Local Map & 16.01\\ 
+ 		  & Total & 31.60\\ 
+ Local Mapping & Keyframe Insertion & 11.88\\ 
+ 		       & Map Point Culling & 3.18\\ 
+ 		       & Map Point Creation & 72.96\\ 
+ 		       & Local BA & 360.41\\
+ 		       & Keyframe Culling & 15.79\\
+ 		       & Total & 464.27\\
 \hline
-Three & Four\\
-\hline
+ \hline
 \end{tabular}
-\end{center}
 \end{table}
+%
+ 
+\subsection{Performance in the TUM RGB-d Dataset}
+The TUM RGB-D benchmark is a unique dataset to evaluate the accuracy of vision localization because it provides several sequences with accurate ground truth obtained with an external motion capture system. Besides, it is possible to compare the result with other SLAM systems such as LSD-SLAM and PTAM in the TUM RGB-D dataset, which lets the performance more intuitively presented.
+
+Table \ref{TUM Dataset} shows a comparison of localization error in centimeter of ORB-SLAM, LSD-SLAM, and PTAM. Intuitively, the ORB-SLAM has less localization error at most places in the TUM RGB-D sequence. Generally, ORB-SLAM has the best localization performance among other SLAM systems.
+
+\begin{table}[h!]
+\caption{Localization Error of ORB-SLAM, LSD-SLAM, and PTAM in the  TUM RGB-D Benchmark}
+\label{TUM Dataset}
+\centering
+\begin{tabular}{ l c c c } 
+\hline
+ \hline
+ Position & ORB-SLAM & PTAM & LSD-SLAM\\ 
+ \hline
+ Position 1	& \textbf{0.90} & 1.15 & 9.00\\ 
+ Position 2	& 0.30 & \textbf{0.20} & 2.15\\ 
+ Position 3	& \textbf{2.99} & X & 38.07\\ 
+ Position 4 & \textbf{1.69} & X & 10.65\\ 
+ Position 5	& 3.81 & \textbf{2.63} & X\\ 
+ Position 6 & \textbf{0.88} & X & 4.57\\ 
+ Position 7 & \textbf{3.45} & X & 38.53\\
+ Position 8 & \textbf{1.39} & 2.74 & 7.54\\
+ Position 9 & \textbf{0.77} & 0.93 & 7.95\\
+\hline
+ \hline
+\end{tabular}
+\end{table}
+%
+
+\subsection{Performance in the KITTI Dataset}
+The KITTI dataset is an appropriate large-scale dataset to test the performance of SLAM systems. It is a extremely challenging dataset for monocular vision slam due to fast rotations and relatively high car speed. The results show that ORB-SLAM is a accurate and efficient SLAM system.
+
+\section{Implementation} 
+In this section, the lesson lerned about the function and the structure implemented in the ORB-SLAM is introduced. It is generous of the author that he published all code open-sourced. Since ORB-SLAM is such a well-performed SLAM system, it is an excellent chance to analyze the code and reproduce the SLAM system. 
+
+\subsection{Main Procedure}
+Essential functions are introduced in this section. ORB-SLAM supports now monocular, stereo, and RGB-D camera system. In the following sections, the only implementation in the monocular system is discussed.
+
+\subsubsection{System.cpp}
+
+At first use function \textit{GrabImageMonocular()} to insert images. Images are converted in gray-scale and named \textit{mImGray}. Besides, an ORB vocabulary is loaded in this step. Keyframes and map are created and all three threads introduced in section \ref{section3} are initialized.
+
+\subsubsection{Tracking.cpp}
+Firstly, use \textit{MonocularInitializer()} to initialize the tracker. The frame with features extracted less than 100 is dropped. Besides, the tracker needs 2 frames to perform the initialization step.
+
+Create object \textit{mpIniORBextractor()} from class \textit{ORBextractor} as a feature extractor. The class is implemented separately in script \textit{ORBextractor.cpp}.
+
+Use heuristirc introduced in section \ref{map_init} to choose the Homography or Fundamental matrix to compute relative motion between two frames and map points. This procedure is implemented in \textit{mpInitializer()}. Use \textit{CreateInitialMapMonocular()} to store the reconstructed 3D points into keyframes and the map.
+
+\subsubsection{LocalMapping.cpp}
+Use \textit{InsertKeyFrame()} and \textit{CheckNewKeyFrames()} to insert new keyframes from the tracking thread and check if all new keyframes are added. After that, links between keyframes are updated in the covisibility graph and essential graph.
+
+Use of \textit{MapPointCulling()} can elinimate the map points added in the last step with low quality. The criterion of good map points are introduced in section \ref{Mappoint_culling}. Each corresponding points in keyframes must be triangulated to create more map points. 
+
+The last step in the local mapping thread is implemented in \textit{KeyFrameCulling()}. If $90\%$ of map points in a keyframe can be detected by at least other three keyframes, this keyframe is redundant and must be culled.
+
+\subsubsection{LoopClosing.cpp}
+Similar to the local mapping thread, the loop closing thread is based on each new keyframe. Therefore it uses same functions \textit{InsertKeyFrame()} and \textit{CheckNewKeyFrame()} to insert and check new keyframes.
+
+In function \textit{DetectLoop()}, the reference BoW similarity score is computed between the new keyframe and all keyframes in the covisibility graph. After that, the keyframe with lowest similarity score is chosen and added into loop candidates \textit{vpCandidateKFs}. However, if there is no loop candidate, this function only adds the new keyframe and return false.
+
+For each loop candidate the consistency with previous loop candidates is checked. Each loop candidate and connected keyframes build cobisibility group \textit{spCandidateGroup}. The consistent loop must be detected in several consecutive keyframes to be accepted.
+
+Use \textit{ComputeSim3()} based on RANSAC to compute the sim3 between current keyframe and loop candidate. Based on the estimated sim3, it is possible to project 3D points and compute more accurate sim3 using optimization method. The solver of sim3 is implemented separately in script \textit{Sim3Solver.cpp}. 
+
+\textit{CorrectLoop()} is the function which is implemented to fuse the loop candidates and duplicated map points. Based on the solved sim3 and relative pose, the pose of keyframe and detected map points is adjusted. The map points of loop candidate and current keyframe are machted and the covisibility graph is updated. After the pose optimization based on the essential graph, a global bundle adjustment is performed.
+
+\subsubsection{Others}
+
+Except the main procedure and threads, there are still many implemented function of ORB-SLAM. They are all published on GitHub site of author.
+
+\subsection{Robot Operating System}
+ORB-SLAM is implemented in ROS (Robot Operating System). ROS is an operating system in concept because it provides all the services such as hardware abstraction, low-level device control, implementation of commonly-used functionality, message-passing between processes, and package management.
 
 
-   \begin{figure}[thpb]
-      \centering
-      \framebox{\parbox{3in}{We suggest that you use a text box to insert a graphic (which is ideally a 300 dpi TIFF or EPS file, with all fonts embedded) because, in an document, this method is somewhat more stable than directly inserting a picture.
-}}
-      %\includegraphics[scale=1.0]{figurefile}
-      \caption{Inductance of oscillation winding on amorphous
-       magnetic core versus DC bias magnetic field}
-      \label{figurelabel}
-   \end{figure}
-   
+\subsection{Demo}
+There is a ROS implementation of the ORB-SLAM real-time SLAM library for Monocular, Stereo and RGB-D cameras available, that computes the camera trajectory and a sparse 3D reconstruction. It is able to detect loops and relocalize the camera in real time. This demo is extremly user-friendly because all data I/O is handled via ROS topics. For vizualization people can use RViz. 
 
-Figure Labels: Use 8 point Times New Roman for Figure labels. Use words rather than symbols or abbreviations when writing Figure axis labels to avoid confusing the reader. As an example, write the quantity “Magnetization”, or “Magnetization, M”, not just “M”. If including units in the label, present them within parentheses. Do not label axes only with units. In the example, write “Magnetization (A/m)” or “Magnetization {A[m(1)]}”, not just “A/m”. Do not label axes with a ratio of quantities and units. For example, write “Temperature (K)”, not “Temperature/K.”
+After the installation of ROS and other required packages, user can launch ORB-SLAM by given
+%
+\begin{lstlisting}
+rosrun ORB_SLAM2 Mono PATH_TO_VOCABULARY 
+PATH_TO_SETTINGS_FILE
+\end{lstlisting}
+%
+in terminal. The input images can be inserted either from a ROS bag such as TUM RGB-D dataset, or a commonly used mono camera. As shown in figure \ref{example}, the ORB-SLAM is launched successfully. It is connected with a webcam and has a robust tracking performance. If the camera moves too fast, the ORB-SLAM could lose tracking. However, it can still relocalize the camera position in a tiny time, which is an advantage of ORB-SLAM introduced in section \ref{section_introduction}.
 
-\section{CONCLUSIONS}
 
-A conclusion section is not required. Although a conclusion may review the main points of the paper, do not replicate the abstract as the conclusion. A conclusion might elaborate on the importance of the work or suggest applications and extensions. 
+\begin{figure}[!htbp]
+\centering
+\includegraphics[scale=0.128]{./images/ORB_example}
+\caption{ORB-SLAM using mono camera, launched in ROS environment}
+\label{example}
+\end{figure}
 
-\addtolength{\textheight}{-12cm}   % This command serves to balance the column lengths
-                                  % on the last page of the document manually. It shortens
-                                  % the textheight of the last page by a suitable amount.
-                                  % This command does not take effect until the next page
-                                  % so it should come on the page before the last. Make
-                                  % sure that you do not shorten the textheight too much.
+
+\section{Overview and Outlook}
+
+In this section, also the last chapter of the paper, a short summary of seminar sensors in robots and some continuing concepts and work regarding the visual SLAM methods are given.
+
+\subsection{Summary}
+The comparison of ORB-SLAM and other SLAM systems is given in section \ref{Performance}. It is obvious that the ORB-SLAM is the state-of-the-art SLAM method at that time. Besides, it has a very user-friendly implementation, which allows people to launch and improve the system quickly. 
+
+\subsection{Future Work}
+There are still several aspects, which ORB-SLAM should improve.
+\subsubsection{Accuracy}
+The ORB extractor is extremely efficient. However, the accuracy of ORB-SLAM can be improved incorporating points at infinity in the tracking.
+\subsubsection{Reconstruction}
+The reconstructed map is sparse. As known to all, a dense map is usually more intuitive and useful. Luckily, the sparse map of ORB-SLAM can be an excellent initial guess and skeleton, on top of which a dense and accurate map of the scene can be built.
+\subsubsection{Semantic SLAM}
+The SLAM system can be nowadays combined with deep learning. Using semantic segmentation in SLAM brings advantages from two aspects.
+%
+\begin{itemize}
+\item Semantic supports SLAM: Give every object detected a label helps in loop detection and bundle adjustment optimization.
+\item SLAM supports Semantic: Compute the position of objects helps humans save time on labeling in the training dataset.
+\end{itemize}
+%
+\begin{figure}[!htbp]
+\centering
+\includegraphics[scale=0.14]{./images/semantic_slam}
+\caption{An example of Semantic SLAM}
+\label{semantic_slam}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -418,51 +496,15 @@ A conclusion section is not required. Although a conclusion may review the main 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{APPENDIX}
-
-Appendixes should appear before the acknowledgment.
 
 \section*{ACKNOWLEDGMENT}
+Personally, it is my first seminar paper. To be honest, this is the first paper I read about SLAM, and I am very interested in this topic. It is worth investing the time of a month to read the paper and prepare for the presentation. 
 
-The preferred spelling of the word “acknowledgment” in America is without an “e” after the “g”. Avoid the stilted expression, “One of us (R. B. G.) thanks . . .”  Instead, try “R. B. G. thanks”. Put sponsor acknowledgments in the unnumbered footnote on the first page.
-
-
+Due to the pandemic of the coronavirus, it is not possible to hold the seminar as usual. Therefore, I want to give a special thanks to our supervisor Peter Gawronski, who always answers questions in the shortest time and ensures us having a successful online presentation. I appreciate our professor Burschka, who attended the seminar every time and gave us some guidance in research.
+\cite{Murray.1993}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-References are important to the reader; therefore, each citation must be complete and correct. If at all possible, references should be commonly available publications.
-
-
-
-\begin{thebibliography}{99}
-
-\bibitem{c1} G. O. Young, “Synthetic structure of industrial plastics (Book style with paper title and editor),” 	in Plastics, 2nd ed. vol. 3, J. Peters, Ed.  New York: McGraw-Hill, 1964, pp. 15–64.
-\bibitem{c2} W.-K. Chen, Linear Networks and Systems (Book style).	Belmont, CA: Wadsworth, 1993, pp. 123–135.
-\bibitem{c3} H. Poor, An Introduction to Signal Detection and Estimation.   New York: Springer-Verlag, 1985, ch. 4.
-\bibitem{c4} B. Smith, “An approach to graphs of linear forms (Unpublished work style),” unpublished.
-\bibitem{c5} E. H. Miller, “A note on reflector arrays (Periodical style—Accepted for publication),” IEEE Trans. Antennas Propagat., to be publised.
-\bibitem{c6} J. Wang, “Fundamentals of erbium-doped fiber amplifiers arrays (Periodical style—Submitted for publication),” IEEE J. Quantum Electron., submitted for publication.
-\bibitem{c7} C. J. Kaufman, Rocky Mountain Research Lab., Boulder, CO, private communication, May 1995.
-\bibitem{c8} Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, “Electron spectroscopy studies on magneto-optical media and plastic substrate interfaces(Translation Journals style),” IEEE Transl. J. Magn.Jpn., vol. 2, Aug. 1987, pp. 740–741 [Dig. 9th Annu. Conf. Magnetics Japan, 1982, p. 301].
-\bibitem{c9} M. Young, The Techincal Writers Handbook.  Mill Valley, CA: University Science, 1989.
-\bibitem{c10} J. U. Duncombe, “Infrared navigation—Part I: An assessment of feasibility (Periodical style),” IEEE Trans. Electron Devices, vol. ED-11, pp. 34–39, Jan. 1959.
-\bibitem{c11} S. Chen, B. Mulgrew, and P. M. Grant, “A clustering technique for digital communications channel equalization using radial basis function networks,” IEEE Trans. Neural Networks, vol. 4, pp. 570–578, July 1993.
-\bibitem{c12} R. W. Lucky, “Automatic equalization for digital communication,” Bell Syst. Tech. J., vol. 44, no. 4, pp. 547–588, Apr. 1965.
-\bibitem{c13} S. P. Bingulac, “On the compatibility of adaptive controllers (Published Conference Proceedings style),” in Proc. 4th Annu. Allerton Conf. Circuits and Systems Theory, New York, 1994, pp. 8–16.
-\bibitem{c14} G. R. Faulhaber, “Design of service systems with priority reservation,” in Conf. Rec. 1995 IEEE Int. Conf. Communications, pp. 3–8.
-\bibitem{c15} W. D. Doyle, “Magnetization reversal in films with biaxial anisotropy,” in 1987 Proc. INTERMAG Conf., pp. 2.2-1–2.2-6.
-\bibitem{c16} G. W. Juette and L. E. Zeffanella, “Radio noise currents n short sections on bundle conductors (Presented Conference Paper style),” presented at the IEEE Summer power Meeting, Dallas, TX, June 22–27, 1990, Paper 90 SM 690-0 PWRS.
-\bibitem{c17} J. G. Kreifeldt, “An analysis of surface-detected EMG as an amplitude-modulated noise,” presented at the 1989 Int. Conf. Medicine and Biological Engineering, Chicago, IL.
-\bibitem{c18} J. Williams, “Narrow-band analyzer (Thesis or Dissertation style),” Ph.D. dissertation, Dept. Elect. Eng., Harvard Univ., Cambridge, MA, 1993. 
-\bibitem{c19} N. Kawasaki, “Parametric study of thermal and chemical nonequilibrium nozzle flow,” M.S. thesis, Dept. Electron. Eng., Osaka Univ., Osaka, Japan, 1993.
-\bibitem{c20} J. P. Wilkinson, “Nonlinear resonant circuit devices (Patent style),” U.S. Patent 3 624 12, July 16, 1990. 
-
-
-
-
-
-
-\end{thebibliography}
+\printbibliography
 
 
 
